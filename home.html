@@ -88,7 +88,7 @@ locationsRef.on('child_added', function(snapshot) {
       lng: data.User.l[1]
     },
     map: map,
-    label: markerLabel
+   // label: markerLabel
   });
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
