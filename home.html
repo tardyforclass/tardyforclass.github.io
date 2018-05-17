@@ -122,7 +122,19 @@ locationsRef.on('child_added', function(snapshot) {
      function _setGeoFire(){
 geoFire.set("User", [lat, lng]).then(()=>{
   console.log("Location added");
-  pushRef.child("User").onDisconnect().remove();
+  
+  if (window.performance) {
+  console.info("window.performance works fine on this browser");
+}
+  if (performance.navigation.type == 1) {
+    console.info( "This page is reloaded" );
+     pushRef.child("User").onDisconnect().remove();
+  } else {
+    console.info( "This page is not reloaded");
+  }
+
+  
+  //pushRef.child("User").onDisconnect().remove();
 }).catch(function(error) {
   console.log(error);
 });
