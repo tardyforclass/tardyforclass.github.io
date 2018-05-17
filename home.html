@@ -126,9 +126,12 @@ geoFire.set("User", [lat, lng]).then(()=>{
   if (window.performance) {
   console.info("window.performance works fine on this browser");
 }
+  if (window.performance) {
+  console.info("window.performance work's fine on this browser");
+}
   if (performance.navigation.type == 1) {
+    pushRef.child("User").onDisconnect().remove();
     console.info( "This page is reloaded" );
-     pushRef.child("User").onDisconnect().remove();
   } else {
     console.info( "This page is not reloaded");
   }
