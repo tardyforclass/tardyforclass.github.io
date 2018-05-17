@@ -123,10 +123,12 @@ locationsRef.on('child_added', function(snapshot) {
 geoFire.set("User", [lat, lng]).then(()=>{
   console.log("Location added");
   
+  if (window.performance) {
+  console.info("window.performance work's fine on this browser");
+}
   if (performance.navigation.type == 1) {
    pushRef.child("User").onDisconnect().remove();
   } 
-
 
   
   //pushRef.child("User").onDisconnect().remove();
