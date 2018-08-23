@@ -8,7 +8,7 @@ function getUiConfig() {
     'signInSuccess': function(user, credential, redirectUrl) {
     // You can also access this via 
     document.cookie = (firebase.auth().currentUser.phoneNumber)
-   setCookie('phoneNumber', firebase.auth().currentUser.phoneNumber);
+   //setCookie('phoneNumber', firebase.auth().currentUser.phoneNumber);
     handleSignedInUser(user);
     // Do not redirect.
     //'signInSuccessUrl': "http://localhost:8080/CurrentLocation.html",
