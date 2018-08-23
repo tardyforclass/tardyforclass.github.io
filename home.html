@@ -81,7 +81,7 @@
               var locationsRef = firebase.database().ref("locations");
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
-  var markerLabel = 
+  //var markerLabel = 
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
