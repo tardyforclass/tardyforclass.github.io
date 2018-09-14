@@ -19,7 +19,7 @@
     </style>
     <!-- Place this inside the HTML head; don't use async defer for now -->
 
-    
+<script src="auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
@@ -82,13 +82,14 @@
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
   var markerLabel = firebase.auth().currentUser.phoneNumber;
+
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
       lng: data.User.l[1]
     },
     map: map,
-   // label: markerLabel
+    label: markerLabel
   });
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
@@ -122,10 +123,9 @@ locationsRef.on('child_added', function(snapshot) {
      function _setGeoFire(){
 geoFire.set("User", [lat, lng]).then(()=>{
   console.log("Location added");
-  
-  
-  
-  pushRef.child("User").onDisconnect().remove();
+
+//check for navigation time API support
+pushRef.child("User").onDisconnect().remove();
 }).catch(function(error) {
   console.log(error);
 });
