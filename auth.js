@@ -12,7 +12,7 @@ function getUiConfig() {
     handleSignedInUser(user);
     // Do not redirect.
     //'signInSuccessUrl': "http://localhost:8080/CurrentLocation.html",
-    return true;
+    return false;
   }
     },
     // Opens IDP Providers sign-in flow in a popup.
