@@ -1,139 +1,61 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <!-- Place this inside the HTML head; don't use async defer for now -->
-
-<script src="auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-<script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
-
-  <script>
-        
-        var config = {
-    apiKey: "",
+<script src="cordova.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCWZjRe2CK8Hu2VN35AgZOQ7lQZKcI-UWM",
     authDomain: "carrier-35d7c.firebaseapp.com",
     databaseURL: "https://carrier-35d7c.firebaseio.com",
     projectId: "carrier-35d7c",
     storageBucket: "carrier-35d7c.appspot.com",
     messagingSenderId: "827792028763"
   };
-        if (!firebase.apps.length) {
-            firebase.initializeApp(config);
-        }
-        
-        //Create a node at firebase location to add locations as child keys
-        //var locationsRef = firebase.database().ref("locations");
-        
-        // Create a new GeoFire key under users Firebase location
-        //var geoFire = new GeoFire(locationsRef.push());
+  firebase.initializeApp(config);
+</script>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+  <link href="auth.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
 
 
 
-        //Create a node at firebase location to add locations as child keys
-        var locationsRef = firebase.database().ref("locations");
-        var pushRef = locationsRef.push()
-      // Create a new GeoFire key under users Firebase location
-      // replace var geoFire = new GeoFire(locationsRef.push()); with
-      var geoFire = new GeoFire(pushRef); 
-      </script>
+ <div id="container">
+      <h3></h3>
+      <div id="loading"></div>
+      <div id="loaded" class="hidden">
+        <div id="main">
+          <div id="user-signed-in" class="hidden">
+            <div id="user-info">
+              <div id="photo-container">
+                <img id="photo">
+              </div>
+              <div id="name"></div>
+              <div id="email"></div>
+              <div class="clearfix"></div>
+            </div>
+            <p>
+              <button id="sign-out">Sign Out</button>
+              <button id="delete-account">Delete account</button>
+            </p>
+          </div>
+          <div id="user-signed-out" class="hidden">
+            <h4>You are signed out.</h4>
+            <div id="firebaseui-spa">
+              <h3></h3>
+              <div id="firebaseui-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="auth.js"></script>
 
-
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      var lat, lng;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 18
-          //mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
-        infoWindow = new google.maps.InfoWindow;
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            lat = position.coords.latitude;
-            lng = position.coords.longitude;
-            var pos = {lat: lat, lng: lng };
-                _setGeoFire();
-              var locationsRef = firebase.database().ref("locations");
-locationsRef.on('child_added', function(snapshot) {
-  var data = snapshot.val();
-  var markerLabel = firebase.auth().currentUser.phoneNumber;
-
-  var marker = new google.maps.Marker({
-    position: {
-      lat: data.User.l[0],
-      lng: data.User.l[1]
-    },
-    map: map,
-    label: markerLabel
-  });
-  bounds.extend(marker.getPosition());
-  marker.addListener('click', (function(data) {
-    return function(e) {
-      infowindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
-      infowindow.open(map, this);
-    }
-  }(data)));
-  map.fitBounds(bounds);
-});
-          
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Current Location');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-     function _setGeoFire(){
-geoFire.set("User", [lat, lng]).then(()=>{
-  console.log("Location added");
-
-//check for navigation time API support
-pushRef.child("User").onDisconnect().remove();
-}).catch(function(error) {
-  console.log(error);
-});
-}
-
-    </script>
-    <script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
-    </script>
-  </body>
-</html>
+</body>
