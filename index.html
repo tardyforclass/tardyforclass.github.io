@@ -21,48 +21,6 @@
   
   <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
-
-
-<script>
-
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    var uiConfig = {
-  callbacks: {
-    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-     //getting the number after login
-      debugger;
-      var phoneNumber = authResult.user.phoneNumber;
-      return true;
-    },
-    uiShown: function() {
-
-      document.getElementById('loader').style.display = 'none';
-    }
-  },
-  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-  signInFlow: 'popup',
-  signInSuccessUrl: '<url-to-redirect-to-on-success>',
-        signInOptions : [
-    {
-      provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-      recaptchaParameters: {
-        type: 'image', // 'audio'
-        size: 'normal', // 'invisible' or 'compact'
-        badge: 'bottomleft' //' bottomright' or 'inline' applies to invisible.
-      },
-      defaultCountry: 'MX'
-    }
-  ],
-  // Terms of service url.
-  tosUrl: '<your-tos-url>',
-  // Privacy policy url.
-  privacyPolicyUrl: '<your-privacy-policy-url>'
-};
-      
-      // The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
-  </script>
-  
   <link href="auth.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
