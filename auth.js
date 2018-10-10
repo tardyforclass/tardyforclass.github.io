@@ -1,17 +1,19 @@
 /**
  * @return {!Object} The FirebaseUI config.
  */
- function getUiConfig() {
+function getUiConfig() {
   return {
     'callbacks': {
-      signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-     //getting the number after login
-      debugger;
-      var phoneNumber = authResult.user.phoneNumber;
-      return true;
-    },
       // Called when the user has been successfully signed in.
-    
+    'signInSuccess': function(user, credential, redirectUrl) {
+    // You can also access this via 
+    //document.cookie = (firebase.auth().currentUser.phoneNumbe)
+   //setCookie('phoneNumber', firebase.auth().currentUser.phoneNumber);
+    handleSignedInUser(user);
+    // Do not redirect.
+    //'signInSuccessUrl': "http://localhost:8080/CurrentLocation.html",
+    return true;
+  }
     },
     // Opens IDP Providers sign-in flow in a popup.
     'signInSuccessUrl':  "https://vkprakash.github.io/carryr/home.html",
@@ -23,15 +25,16 @@
         provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
         recaptchaParameters: {
           type: 'image', // another option is 'audio'
-          size: 'normal', // other options are 'normal' or 'compact'
+          size: 'invisible', // other options are 'normal' or 'compact'
           badge: 'bottomleft' // 'bottomright' or 'inline' applies to invisible.
-        },
+        }
       }
     ],
     // Terms of service url.
     'tosUrl': 'https://www.google.com'
   };
 }
+
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
@@ -69,7 +72,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   document.getElementById('loading').style.display = 'none';
   document.getElementById('loaded').style.display = 'block';
   user ? handleSignedInUser(user) : handleSignedOutUser();
-  //firebase.auth().currentUser.phoneNumber = document.cookie;
 });
 
 /**
