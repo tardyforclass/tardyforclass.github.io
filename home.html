@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,7 +20,7 @@
     </style>
     <!-- Place this inside the HTML head; don't use async defer for now -->
 
-<script src="auth.js"></script>
+    
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
@@ -42,9 +43,6 @@
         
         // Create a new GeoFire key under users Firebase location
         //var geoFire = new GeoFire(locationsRef.push());
-
-
-
         //Create a node at firebase location to add locations as child keys
         var locationsRef = firebase.database().ref("locations");
         var pushRef = locationsRef.push()
@@ -81,17 +79,14 @@
               var locationsRef = firebase.database().ref("locations");
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
-  var userPhoneNumber = firebase.auth().currentUser.phoneNumber;
-  confirm (userPhoneNumber)
-  
-//var markerLabel = ;
+ // var markerLabel = document.cookie;
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
       lng: data.User.l[1]
     },
     map: map,
-    label: markerLabel
+   // label: markerLabel
   });
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
@@ -125,17 +120,18 @@ locationsRef.on('child_added', function(snapshot) {
      function _setGeoFire(){
 geoFire.set("User", [lat, lng]).then(()=>{
   console.log("Location added");
-
-//check for navigation time API support
-pushRef.child("User").onDisconnect().remove();
+  
+  
+  
+  pushRef.child("User").onDisconnect().remove();
 }).catch(function(error) {
   console.log(error);
 });
 }
-
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
   </body>
 </html>
+
