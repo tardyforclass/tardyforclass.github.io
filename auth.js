@@ -8,6 +8,7 @@
      //getting the number after login
       debugger;
       var phoneNumber = authResult.user.phoneNumber;
+       console.log( phoneNumber);
       return true;
     },
       // Called when the user has been successfully signed in.
