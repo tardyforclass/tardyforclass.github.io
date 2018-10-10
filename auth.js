@@ -14,7 +14,7 @@
     
     },
     // Opens IDP Providers sign-in flow in a popup.
-    'signInSuccessUrl':  "http://127.0.0.1 :8080/Carrier/homepage_latest.html",
+    'signInSuccessUrl':  "https://vkprakash.github.io/carryr/home.html",
     'signInFlow': 'popup',
     'signInOptions': [
       // The Provider you need for your app. We need the Phone Auth
