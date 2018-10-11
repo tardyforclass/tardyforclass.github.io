@@ -9,6 +9,7 @@
       debugger;
       var phoneNumber = authResult.user.phoneNumber;
        console.log( phoneNumber);
+       localStorage['phoneNumber'] = firebase.auth().currentUser.phoneNumber.toString();
       return true;
     },
       // Called when the user has been successfully signed in.
