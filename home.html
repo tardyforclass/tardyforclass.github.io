@@ -84,8 +84,10 @@ locationsRef.on('child_added', function(snapshot) {
  // var markerLabel = document.cookie;
   //confirm(document.getElementById("phone").innerHTML)
   
- var ML = localStorage.getItem("phone");
-  confirm(ML);
+  var ML = localStorage.getItem('phoneNumber');
+  
+// var ML = localStorage.getItem("phone");
+ confirm(ML);
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
