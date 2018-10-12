@@ -13,6 +13,8 @@ function getUiConfig() {
       return true;
     },
       // Called when the user has been successfully signed in.
+       console.log(document.getElementById("phone").innerHTML)
+        confirm(document.getElementById("phone").innerHTML)
     
     },
     // Opens IDP Providers sign-in flow in a popup.
