@@ -14,7 +14,7 @@ function getUiConfig() {
     
     },
     // Opens IDP Providers sign-in flow in a popup.
-    'signInSuccessUrl':  "",
+    'signInSuccessUrl':  "https://vkprakash.github.io/carryr/home.html",
     'signInFlow': 'popup',
     'signInOptions': [
       // The Provider you need for your app. We need the Phone Auth
