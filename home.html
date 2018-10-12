@@ -82,6 +82,7 @@ locationsRef.on('child_added', function(snapshot) {
   // var phoneNumber = localStorage['phoneNumber']
 // var markerLabel = (phoneNumber);
  // var markerLabel = document.cookie;
+  confirm(document.getElementById("phone").innerHTML)
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
