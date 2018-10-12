@@ -8,8 +8,8 @@ function getUiConfig() {
       var phoneNumber = authResult.user.phoneNumber;
       localStorage['phoneNumber'] = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login  = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login 
         var phone = localStorage['phoneNumber'];
-        console.log(phone)
-        confirm(phone)
+        console.log(document.getElementById("phone").innerHTML)
+        confirm(document.getElementById("phone").innerHTML)
       return true;
     },
       // Called when the user has been successfully signed in.
