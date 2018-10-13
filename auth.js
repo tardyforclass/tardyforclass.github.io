@@ -7,6 +7,8 @@ function getUiConfig() {
       debugger;
       //var phoneNumber = authResult.user.phoneNumber;
      localStorage.setItem('phoneNumber', firebase.auth().currentUser.phoneNumber.toString());
+        //confirm(document.getElementById("phone").innerHTML)
+        localStorage.setItem('PhoneNumber', document.getElementById("phone").innerHTML);
         //localStorage['phoneNumber'] = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login  = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login 
         //var phone = localStorage.setItem('phoneNumber', firebase.auth().currentUser.phoneNumber.toString());
        // console.log(document.getElementById("phone").innerHTML)
