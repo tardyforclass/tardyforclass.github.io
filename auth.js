@@ -5,11 +5,11 @@ function getUiConfig() {
      //getting the number after login
       debugger;
       var phoneNumber = authResult.user.phoneNumber;
-      localStorage['phoneNumber'] = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login  = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login 
-        var phone = localStorage['phoneNumber'];
+     localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
       return true;
     },
       // Called when the user has been successfully signed in.
+       
     
     },
     // Opens IDP Providers sign-in flow in a popup.
