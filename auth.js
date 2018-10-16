@@ -48,7 +48,7 @@ var handleSignedInUser = function(user) {
   document.getElementById('email').textContent = user.email;
   document.getElementById('phone').textContent = user.phoneNumber;
   localStorage.setItem("phoneNumber",user.phoneNumber);
-   confirm(user.phoneNumber)
+   //confirm(user.phoneNumber)
   if (user.photoURL){
     document.getElementById('photo').src = user.photoURL;
     document.getElementById('photo').style.display = 'block';
