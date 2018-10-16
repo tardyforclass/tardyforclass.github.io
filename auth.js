@@ -50,7 +50,7 @@ var handleSignedInUser = function(user) {
   localStorage.setItem("phoneNumber",user.phoneNumber);
    //confirm(user.phoneNumber)
   if (user.photoURL){
-    document.getElementById('photo').src = user.photoURL;
+    //document.getElementById('photo').src = user.photoURL;
     document.getElementById('photo').style.display = 'block';
   } else {
     document.getElementById('photo').style.display = 'none';
