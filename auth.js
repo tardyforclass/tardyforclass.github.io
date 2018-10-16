@@ -3,14 +3,16 @@ function getUiConfig() {
     'callbacks': {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
      //getting the number after login
-     // debugger;
+      debugger;
      // var phoneNumber = authResult.user.phoneNumber;
-     localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
+     //localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
       return true;
     },
       // Called when the user has been successfully signed in.
        
-    
+    debugger;
+      var phoneNumber = authResult.user.phoneNumber;
+     localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
     },
     // Opens IDP Providers sign-in flow in a popup.
     'signInSuccessUrl':  "https://vkprakash.github.io/carryr/home.html",
