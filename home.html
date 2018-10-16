@@ -97,13 +97,21 @@ locationsRef.on('child_added', function(snapshot) {
      
     },
     map: map,
-   label: markerLabel
-  
+   label: markerLabel,
+   url: "sms://" + (ML)
+
+
    // new google.maps.Size(42, 68)
   });
+
+   google.maps.event.addListener(marker, 'click', function() {
+        window.location.href = this.url;
+    });
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
+    //content: "Hello world"
     return function(e) {
+
       infowindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
       infowindow.open(map, this);
     }
@@ -112,7 +120,7 @@ locationsRef.on('child_added', function(snapshot) {
 });
           
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Current Location');
+            infoWindow.setContent("Current Location");
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
