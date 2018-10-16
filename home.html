@@ -93,6 +93,12 @@ locationsRef.on('child_added', function(snapshot) {
     position: {
       lat: data.User.l[0],
       lng: data.User.l[1]
+      label: {
+      text: markerLabel,
+      color: "#eb3a44",
+      fontSize: "16px",
+      fontWeight: "bold"
+    }
     },
     map: map,
    // label: markerLabel
