@@ -43,6 +43,17 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
  * @param {!firebase.User} user
  */
 var handleSignedInUser = function(user) {
+  
+  
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log(user);
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+});
+  
   localStorage.setItem("user",firebase.auth().currentUser);
   document.getElementById('user-signed-in').style.display = 'block';
   document.getElementById('user-signed-out').style.display = 'none';
