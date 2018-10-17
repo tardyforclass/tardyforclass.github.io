@@ -2,7 +2,7 @@ function getUiConfig() {
   return {
     'callbacks': {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        localStorage.setItem("user",firebase.auth().currentUser);
+        
      //getting the number after login
       debugger;
      // var phoneNumber = authResult.user.phoneNumber;
@@ -43,6 +43,7 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
  * @param {!firebase.User} user
  */
 var handleSignedInUser = function(user) {
+  localStorage.setItem("user",firebase.auth().currentUser);
   document.getElementById('user-signed-in').style.display = 'block';
   document.getElementById('user-signed-out').style.display = 'none';
   document.getElementById('name').textContent = user.displayName;
