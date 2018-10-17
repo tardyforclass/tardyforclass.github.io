@@ -83,7 +83,8 @@ locationsRef.on('child_added', function(snapshot) {
 // var markerLabel = (phoneNumber);
  // var markerLabel = document.cookie;
   //confirm(document.getElementById("phone").innerHTML)
-  
+  var user = localStorage.getItem("user");
+  confirm(user)
   var ML = localStorage.getItem('phoneNumber');
    //$("ol").append("<li>" + add + "</li>") 
   
