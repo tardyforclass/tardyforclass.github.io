@@ -44,6 +44,52 @@
         // Create a new GeoFire key under users Firebase location
         //var geoFire = new GeoFire(locationsRef.push());
         //Create a node at firebase location to add locations as child keys
+        //confirm(firebase.auth().currentUser)
+ var a = prompt("What is your phone number");
+
+var database = firebase.database();
+
+var fruits = database.ref('fruits');
+var data = {
+  name: (a),
+  count: (a)
+}
+
+
+database.ref('fruits').push(data);
+
+
+
+fruits.push(data, finished);
+function finished(error) {
+  if (error) {
+    console.log('ooops');
+  } else {
+    console.log('data saved!');
+  }
+}
+
+var ref = firebase.database().ref();
+
+ref.on("value", function(snapshot) {
+   console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
+
+var playersRef = firebase.database().ref("fruits");
+
+playersRef.orderByChild("name").on("child_added", function(data) {
+   var PD = (data.val().name);
+   confirm(PD)
+
+});
+
+
+
+
+
         var locationsRef = firebase.database().ref("locations");
         var pushRef = locationsRef.push()
       // Create a new GeoFire key under users Firebase location
@@ -79,40 +125,71 @@
               var locationsRef = firebase.database().ref("locations");
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
+
+
+
+
+
+
   // var phoneNumber = localStorage['phoneNumber']
 // var markerLabel = (phoneNumber);
  // var markerLabel = document.cookie;
   //confirm(document.getElementById("phone").innerHTML)
-  var user = localStorage.getItem("user");
-  confirm(user)
-  var ML = localStorage.getItem('phoneNumber');
-   //$("ol").append("<li>" + add + "</li>") 
   
+  var ML = localStorage.getItem('phoneNumber');
+
+
+
+//var playersRef = firebase.database().ref("players/");
+
+//   John: {
+     // number: 1,
+      //age: 30
+   //},
+  
+   //Amanda: {
+     // number: 2,
+     // age: 20
+ //  }
+//});
+
+
+
+//var ref = firebase.database().ref();
+
+//ref.on("value", function(snapshot) {
+  // console.log(snapshot.val());
+//}, function (error) {
+  // console.log("Error: " + error.code);
+//
+
+//var ratingRef = firebase.database().ref("ratings/");
+
+//ratingRef.orderByValue().on("value", function(data) {
+   
+   //data.forEach(function(data) {
+    //  console.log("The " + data.key + " rating is " + data.val());
+  // });
+   
+//});
+
+
+
 // var ML = localStorage.getItem("phone");
  //confirm(ML);
-  var markerLabel = (ML)
+ var markerLabel = (PD)
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
       lng: data.User.l[1]
-     
     },
-    map: map,
-   label: markerLabel,
-   url: "sms://" + (ML)
-
-
-   // new google.maps.Size(42, 68)
+    label: markerLabel,
+    map: map
+   
   });
-
-   google.maps.event.addListener(marker, 'click', function() {
-        window.location.href = this.url;
-    });
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
-    //content: "Hello world"
     return function(e) {
-
       infowindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
       infowindow.open(map, this);
     }
@@ -121,7 +198,7 @@ locationsRef.on('child_added', function(snapshot) {
 });
           
             infoWindow.setPosition(pos);
-            infoWindow.setContent("Current Location");
+            infoWindow.setContent('Current Location');
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
@@ -142,14 +219,21 @@ locationsRef.on('child_added', function(snapshot) {
      function _setGeoFire(){
 geoFire.set("User", [lat, lng]).then(()=>{
   console.log("Location added");
-  
-  
+
+
   
   pushRef.child("User").onDisconnect().remove();
 }).catch(function(error) {
   console.log(error);
 });
 }
+
+
+
+
+
+
+
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
