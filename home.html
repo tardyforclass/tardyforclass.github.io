@@ -45,7 +45,10 @@
         //var geoFire = new GeoFire(locationsRef.push());
         //Create a node at firebase location to add locations as child keys
         //confirm(firebase.auth().currentUser)
- var a = prompt("What is your phone number");
+    
+    var a = localStorage.getItem('phoneNumber');
+    
+ //var a = prompt("What is your phone number");
 
 var database = firebase.database();
 
