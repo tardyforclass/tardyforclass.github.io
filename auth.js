@@ -2,21 +2,18 @@ function getUiConfig() {
   return {
     'callbacks': {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        
      //getting the number after login
       debugger;
-     // var phoneNumber = authResult.user.phoneNumber;
-     //localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
+      var phoneNumber = authResult.user.phoneNumber;
+     localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
       return true;
     },
       // Called when the user has been successfully signed in.
        
-    //debugger;
-     // var phoneNumber = authResult.user.phoneNumber;
-    // localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
+    
     },
     // Opens IDP Providers sign-in flow in a popup.
-    //'signInSuccessUrl':  "https://vkprakash.github.io/carryr/home.html",
+    'signInSuccessUrl':  "https://vkprakash.github.io/carryr/home.html",
     'signInFlow': 'popup',
     'signInOptions': [
       // The Provider you need for your app. We need the Phone Auth
@@ -43,27 +40,13 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
  * @param {!firebase.User} user
  */
 var handleSignedInUser = function(user) {
-  
-  
-  firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log(user);
-    // User is signed in.
-  } else {
-    // No user is signed in.
-  }
-});
-  
-  localStorage.setItem("user",firebase.auth().currentUser);
   document.getElementById('user-signed-in').style.display = 'block';
   document.getElementById('user-signed-out').style.display = 'none';
   document.getElementById('name').textContent = user.displayName;
   document.getElementById('email').textContent = user.email;
   document.getElementById('phone').textContent = user.phoneNumber;
-  localStorage.setItem("phoneNumber",user.phoneNumber);
-   //confirm(user.phoneNumber)
   if (user.photoURL){
-    //document.getElementById('photo').src = user.photoURL;
+    document.getElementById('photo').src = user.photoURL;
     document.getElementById('photo').style.display = 'block';
   } else {
     document.getElementById('photo').style.display = 'none';
@@ -83,7 +66,6 @@ var handleSignedOutUser = function() {
 // Listen to change in auth state so it displays the correct UI for when
 // the user is signed in or not.
 firebase.auth().onAuthStateChanged(function(user) {
- // localStorage.setItem("user",firebase.auth().currentUser);
   document.getElementById('loading').style.display = 'none';
   document.getElementById('loaded').style.display = 'block';
   user ? handleSignedInUser(user) : handleSignedOutUser();
