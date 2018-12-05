@@ -19,14 +19,7 @@ if (user != null) {
     console.log("  Photo URL: " + profile.photoURL);
     console.log(" PhoneNumber" + profile.PhoneNumber);
     
-    var database = firebase.database();
-var Test = database.ref('Test');
-var data = {
-  name: "This is a test"
-  //count: (a)
-}
-database.ref('Test').push(data);
-
+   
    
   });
 }
