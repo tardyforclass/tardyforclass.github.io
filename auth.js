@@ -4,7 +4,7 @@ function getUiConfig() {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
      //getting the number after login
       debugger;
-      var phoneNumber = authResult.user.phoneNumber;
+      //var phoneNumber = authResult.user.phoneNumber;
      localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
       return true;
     },
