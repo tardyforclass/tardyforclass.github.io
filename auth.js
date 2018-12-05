@@ -2,21 +2,14 @@ function getUiConfig() {
   return {
     'callbacks': {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        
-        
-        firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    confirm(firebase.auth().currentUser)
-    localStorage.setItem('phoneNumber', auth().currentUser);
-  } else {
-    // No user is signed in.
-  }
-});
-     
+     //getting the number after login
+      debugger;
+      var phoneNumber = authResult.user.phoneNumber;
+      localStorage['phoneNumber'] = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login  = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login 
+        var phone = localStorage['phoneNumber'];
       return true;
     },
       // Called when the user has been successfully signed in.
-       
     
     },
     // Opens IDP Providers sign-in flow in a popup.
