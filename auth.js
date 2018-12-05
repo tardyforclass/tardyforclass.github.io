@@ -2,10 +2,17 @@ function getUiConfig() {
   return {
     'callbacks': {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-     //getting the number after login
-      debugger;
-      //var phoneNumber = authResult.user.phoneNumber;
-     localStorage.setItem('phoneNumber',  firebase.auth().currentUser.phoneNumber);
+        
+        
+        firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    confirm(firebase.auth().currentUser)
+    localStorage.setItem('phoneNumber', firebase.auth().currentUser);
+  } else {
+    // No user is signed in.
+  }
+});
+     
       return true;
     },
       // Called when the user has been successfully signed in.
