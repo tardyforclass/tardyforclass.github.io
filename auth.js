@@ -7,7 +7,7 @@ function getUiConfig() {
         firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     confirm(firebase.auth().currentUser)
-    localStorage.setItem('phoneNumber', firebase.auth().currentUser);
+    localStorage.setItem('phoneNumber', auth().currentUser);
   } else {
     // No user is signed in.
   }
