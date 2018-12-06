@@ -147,32 +147,25 @@ locationsRef.on('child_added', function(snapshot) {
 //var markerLabel = (a);
   var markerLabel = (a);
   var marker = new google.maps.Marker({
-    google.maps.event.addListener(marker, 'click', function () {
-  window.location.href = ("sms://" + (a));
-});
     position: {
       lat: data.User.l[0],
       lng: data.User.l[1]
      
     },
-    
     map: map,
      label: {
       text: markerLabel
     
     }
   // label: markerLabel,
- // url: "sms://" + markerLabel
+ ( url: "sms://" + (a))
    // new google.maps.Size(42, 68)
   });
-   //google.maps.event.addListener(marker, 'click', function() {
-        //window.location.href = this.url;
+   google.maps.event.addListener(marker, 'click', function() {
+        window.location.href = this.url;
   
-
-
-
-
   });
+  
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
     return function(e) {
