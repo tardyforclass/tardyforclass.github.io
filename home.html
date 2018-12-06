@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,7 +48,6 @@
     //var a = localStorage.getItem('phoneNumber');
     
  
-
         var locationsRef = firebase.database().ref("locations");
         var pushRef = locationsRef.push()
       // Create a new GeoFire key under users Firebase location
@@ -65,12 +63,8 @@
       
     var a =  localStorage.getItem('phoneNumber')
     confirm(a)
-
-
-
      // var a = prompt("What is your phone number");
 var database = firebase.database();
-
 var ref = firebase.database().ref();
 ref.on("value", function(snapshot) {
    console.log(snapshot.val());
@@ -78,15 +72,10 @@ ref.on("value", function(snapshot) {
    console.log("Error: " + error.code);
 });
 var playersRef = firebase.database().ref("fruits");
-
 //var phoneNumber = localStorage.getItem("number")
-
-
-
 playersRef.orderByChild("name").equalTo(a).on("child_added", function(data) {
    console.log("Equal to filter: " + data.val().name);
 });
-
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -204,8 +193,6 @@ geoFire.set("User", [lat, lng]).then(()=>{
   console.log(error);
 });
 }
-
-
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
