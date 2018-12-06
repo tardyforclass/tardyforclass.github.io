@@ -77,6 +77,15 @@
                 providerData: providerData
               }, null, '  ');
             });
+
+                 // var a = prompt("What is your phone number");
+              var database = firebase.database();
+              var fruits = database.ref('fruits');
+              var data = {
+                name: (phoneNumber),
+                //count: (a)
+              }
+              database.ref('fruits').push(data)
           } else {
             // User is signed out.
             document.getElementById('sign-out').addEventListener('click', function() {
