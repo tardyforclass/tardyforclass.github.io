@@ -83,10 +83,9 @@ var playersRef = firebase.database().ref("fruits");
 
 
 
-playersRef.orderByChild("name").on("child_added", function(data) {
-   console.log(data.val().name);
+playersRef.orderByChild("name").equalTo(a).on("child_added", function(data) {
+   console.log("Equal to filter: " + data.val().name);
 });
-
 
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
