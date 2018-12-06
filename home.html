@@ -46,52 +46,9 @@
         //Create a node at firebase location to add locations as child keys
         //confirm(firebase.auth().currentUser)
     
-    var a = localStorage.getItem['phoneNumber'];
-
- //var a = prompt("What is your phone number");
-
-var database = firebase.database();
-
-var fruits = database.ref('fruits');
-var data = {
-  name: (a),
-  count: (a)
-}
-
-
-database.ref('fruits').push(data);
-
-
-
-//fruits.push(data, finished);
-function finished(error) {
-  if (error) {
-    console.log('ooops');
-  } else {
-    console.log('data saved!');
-  }
-}
-
-var ref = firebase.database().ref();
-
-ref.on("value", function(snapshot) {
-   console.log(snapshot.val());
-}, function (error) {
-   console.log("Error: " + error.code);
-});
-
-
-var playersRef = firebase.database().ref("fruits");
-
-playersRef.orderByChild("name").on("child_added", function(data) {
-   var PD = (data.val().name);
-   confirm(PD)
-
-});
-
-
-
-
+    //var a = localStorage.getItem('phoneNumber');
+    
+ 
 
         var locationsRef = firebase.database().ref("locations");
         var pushRef = locationsRef.push()
@@ -105,6 +62,32 @@ playersRef.orderByChild("name").on("child_added", function(data) {
   <body>
     <div id="map"></div>
     <script>
+      
+    var a =  localStorage.getItem('phoneNumber')
+    confirm(a)
+
+
+
+     // var a = prompt("What is your phone number");
+var database = firebase.database();
+
+var ref = firebase.database().ref();
+ref.on("value", function(snapshot) {
+   console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+var playersRef = firebase.database().ref("fruits");
+
+//var phoneNumber = localStorage.getItem("number")
+
+
+
+playersRef.orderByChild("name").on("child_added", function(data) {
+   console.log(data.val().name);
+});
+
+
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -128,23 +111,13 @@ playersRef.orderByChild("name").on("child_added", function(data) {
               var locationsRef = firebase.database().ref("locations");
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
-
-
-
-
-
-
   // var phoneNumber = localStorage['phoneNumber']
 // var markerLabel = (phoneNumber);
  // var markerLabel = document.cookie;
   //confirm(document.getElementById("phone").innerHTML)
   
-  var ML = localStorage.getItem('phoneNumber');
-
-
-
+  //var ML = localStorage.getItem('phoneNumber');
 //var playersRef = firebase.database().ref("players/");
-
 //   John: {
      // number: 1,
       //age: 30
@@ -155,19 +128,13 @@ locationsRef.on('child_added', function(snapshot) {
      // age: 20
  //  }
 //});
-
-
-
 //var ref = firebase.database().ref();
-
 //ref.on("value", function(snapshot) {
   // console.log(snapshot.val());
 //}, function (error) {
   // console.log("Error: " + error.code);
 //
-
 //var ratingRef = firebase.database().ref("ratings/");
-
 //ratingRef.orderByValue().on("value", function(data) {
    
    //data.forEach(function(data) {
@@ -175,20 +142,28 @@ locationsRef.on('child_added', function(snapshot) {
   // });
    
 //});
-
-
-
 // var ML = localStorage.getItem("phone");
  //confirm(ML);
  //var markerLabel = (PD)
+// var markerLabel = (PD);
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
       lng: data.User.l[1]
+     
     },
-    //label: markerLabel,
-    map: map
-   
+    map: map,
+   //label: markerLabel
+  // url: "sms://" + (PD)
+   // new google.maps.Size(42, 68)
+  });
+   google.maps.event.addListener(marker, 'click', function() {
+        window.location.href = this.url;
+  
+
+
+
+
   });
   bounds.extend(marker.getPosition());
   marker.addListener('click', (function(data) {
@@ -222,8 +197,6 @@ locationsRef.on('child_added', function(snapshot) {
      function _setGeoFire(){
 geoFire.set("User", [lat, lng]).then(()=>{
   console.log("Location added");
-
-
   
   pushRef.child("User").onDisconnect().remove();
 }).catch(function(error) {
@@ -232,15 +205,9 @@ geoFire.set("User", [lat, lng]).then(()=>{
 }
 
 
-
-
-
-
-
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
   </body>
 </html>
-
