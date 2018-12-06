@@ -1,7 +1,14 @@
-<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
+<!DOCTYPE html>  
+ < html lang="en">  
+  < head>  
+   < title>EasyAuth</title>  
+   <meta charset="UTF-8">  
+ </head>  
+ <!-- Below is the initialization snippet for my Firebase project. It will vary for each project -->  
+ <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>  
+ <script>  
+  // Initialize Firebase  
+ var config = {
     apiKey: "AIzaSyCWZjRe2CK8Hu2VN35AgZOQ7lQZKcI-UWM",
     authDomain: "carrier-35d7c.firebaseapp.com",
     databaseURL: "https://carrier-35d7c.firebaseio.com",
@@ -11,81 +18,30 @@
   };
   firebase.initializeApp(config);
 
-
-
-</script>
-
-
-
-<html lang="en">
-<head>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <meta charset="UTF-8">
-  <title></title>
-  
-  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
-  <link href="auth.css" rel="stylesheet" type="text/css" media="screen" />
-</head>
-<body>
-
-   <!-- A simple example script to add text to the page that displays the user's Display Name and Email -->  
- <script>  
- // Track the UID of the current user.  
- var currentUid = null;  
- firebase.auth().onAuthStateChanged(function(user) {  
-  // onAuthStateChanged listener triggers every time the user ID token changes.  
-  // This could happen when a new user signs in or signs out.  
-  // It could also happen when the current user ID token expires and is refreshed.  
-  if (user && user.uid != currentUid) {  
-   // Update the UI when a new user signs in.  
-   // Otherwise ignore if this is a token refresh.  
-   // Update the current user UID.  
-   currentUid = user.uid;  
-   document.body.innerHTML = '<h1> Congrats ' + user.displayName + ', you are done! </h1> <h2> Now get back to what you love building. </h2> <h2> Need to verify your email address or reset your password? Firebase can handle all of that for you using the email you provided: ' + user.email + '. <h/2>';  
-  } else {  
-   // Sign out operation. Reset the current user UID.  
-   currentUid = null;  
-   console.log("no user signed in");  
-  }  
- });  
  </script>  
-
-
-
- <div id="container">
-      <h3></h3>
-      <div id="loading"></div>
-      <div id="loaded" class="hidden">
-        <div id="main">
-          <div id="user-signed-in" class="hidden">
-            <div id="user-info">
-              <div id="photo-container">
-                <img id="photo">
-              </div>
-              <div id="name"></div>
-              <div id="email"></div>
-              <div id="phone"></div>
-               <script>
-             </script>
-              <div class="clearfix"></div>
-            </div>
-            <p>
-              <button id="sign-out">Sign Out</button>
-              <button id="delete-account">Delete account</button>
-            </p>
-          </div>
-          <div id="user-signed-out" class="hidden">
-            <h4>You are signed out.</h4>
-            <div id="firebaseui-spa">
-
-              <h3></h3>
-              <div id="firebaseui-container"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="auth.js"></script>
-
-</body>
+ <!-- The code below initializes the sign-in widget from FirebaseUI web. -->  
+ <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>  
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />  
+   <script type="text/javascript">  
+    var uiConfig = {  
+     signInSuccessUrl: 'loggedIn.html',  
+     signInOptions: [  
+      // Specify providers you want to offer your users.  
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,  
+      firebase.auth.EmailAuthProvider.PROVIDER_ID  
+     ],  
+     // Terms of service url can be specified and will show up in the widget.  
+     tosUrl: '<your-tos-url>'  
+    };  
+    // Initialize the FirebaseUI Widget using Firebase.  
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());  
+    // The start method will wait until the DOM is loaded.  
+    ui.start('#firebaseui-auth-container', uiConfig);  
+ </script>  
+ <!-- Include a simple background image & and title -->  
+  <div></div>  
+  <body>  
+       <h1 align="center" style="color:white;">Firebase Auth Quickstart Demo</h1>  
+        <div id="firebaseui-auth-container"></div>  
+  </body>  
+ </html>  
