@@ -4,9 +4,9 @@ function getUiConfig() {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
      //getting the number after login
       debugger;
-      var phoneNumber = UserRecord.phoneNumber
-      localStorage['phoneNumber'] =  UserRecord.phoneNumber // this line should be in the callback method of the Login  = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login 
-        var phone = localStorage['phoneNumber'];
+      //var phoneNumber = UserRecord.phoneNumber
+     // localStorage['phoneNumber'] =  UserRecord.phoneNumber // this line should be in the callback method of the Login  = firebase.auth().currentUser.phoneNumber.toString(); // this line should be in the callback method of the Login 
+       // var phone = localStorage['phoneNumber'];
         
         
 
