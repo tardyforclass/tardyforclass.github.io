@@ -152,6 +152,9 @@ locationsRef.on('child_added', function(snapshot) {
       lng: data.User.l[1]
      
     },
+    google.maps.event.addListener(marker, 'click', function () {
+  window.location.href = ("sms://" + (a));
+});
     map: map,
      label: {
       text: markerLabel
@@ -161,8 +164,8 @@ locationsRef.on('child_added', function(snapshot) {
  // url: "sms://" + markerLabel
    // new google.maps.Size(42, 68)
   });
-   google.maps.event.addListener(marker, 'click', function() {
-        window.location.href = this.url;
+   //google.maps.event.addListener(marker, 'click', function() {
+        //window.location.href = this.url;
   
 
 
