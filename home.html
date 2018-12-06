@@ -145,6 +145,7 @@ locationsRef.on('child_added', function(snapshot) {
  //confirm(ML);
  //var markerLabel = (PD)
 //var markerLabel = (a);
+  var markerLabel = (a);
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
@@ -152,6 +153,10 @@ locationsRef.on('child_added', function(snapshot) {
      
     },
     map: map,
+     label: {
+      text: markerLabel
+    
+    }
   // label: markerLabel,
  // url: "sms://" + (a);
    // new google.maps.Size(42, 68)
