@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <title>Sample FirebaseUI App</title>
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 <script>
@@ -90,8 +91,7 @@
               database.ref('fruits').push(data)
           } else {
             // User is signed out.
-            document.getElementById('sign-out').addEventListener('click', function() {
-    firebase.auth().signOut();
+            
   });
 
 
@@ -116,8 +116,14 @@
     <div id="sign-in-status"></div>
     <div id="sign-in"></div>
     <div id="account-details"></div>
-    <button id="sign-out">Sign Out</button>
-   <button id="delete-account">Delete account</button>
+    <button id="signOut">Sign Out</button>
+<script>
+document.getElementById('signOut').addEventListener('click', function(event) {
+  firebase.auth().signOut();
+});
+</script>
+    
+   
 
 
   </body>
