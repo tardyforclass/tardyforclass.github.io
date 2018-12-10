@@ -106,7 +106,7 @@ locationsRef.on('child_added', function(snapshot) {
   
   marker.addListener('click', (function(data) {
     return function(e) {
-      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.n);
+      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
       infoWindow.open(map, this);
     }
   }(data)));
