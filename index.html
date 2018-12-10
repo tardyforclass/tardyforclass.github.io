@@ -84,13 +84,12 @@
 
                  // var a = prompt("What is your phone number");
               var database = firebase.database();
-              var locations = database.ref('locations');
+              var fruits = database.ref('fruits');
               var data = {
-                n: (phoneNumber)
-               
+                name: (phoneNumber),
                 //count: (a)
               }
-              database.ref('locations').push(data)
+              database.ref('fruits').push(data)
                //localStorage.setItem("number", phoneNumber )
           } else {
             // User is signed out.
