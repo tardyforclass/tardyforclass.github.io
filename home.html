@@ -61,21 +61,7 @@
     <div id="map"></div>
     <script>
       
-    var a =  localStorage.getItem('phoneNumber')
-    confirm(a)
-     // var a = prompt("What is your phone number");
-var database = firebase.database();
-var ref = firebase.database().ref();
-ref.on("value", function(snapshot) {
-   console.log(snapshot.val());
-}, function (error) {
-   console.log("Error: " + error.code);
-});
-var playersRef = firebase.database().ref("fruits");
-//var phoneNumber = localStorage.getItem("number")
-playersRef.orderByChild("name").equalTo(a).on("child_added", function(data) {
-   console.log("Equal to filter: " + data.val().name);
-});
+    
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -94,47 +80,16 @@ playersRef.orderByChild("name").equalTo(a).on("child_added", function(data) {
           navigator.geolocation.getCurrentPosition(function(position) {
             lat = position.coords.latitude;
             lng = position.coords.longitude;
-            var pos = {lat: lat, lng: lng };
+            
+            var pos = {lat: lat, lng: lng, name };
                 _setGeoFire();
               var locationsRef = firebase.database().ref("locations");
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
-  // var phoneNumber = localStorage['phoneNumber']
-// var markerLabel = (phoneNumber);
- // var markerLabel = document.cookie;
-  //confirm(document.getElementById("phone").innerHTML)
-  
-  //var ML = localStorage.getItem('phoneNumber');
-//var playersRef = firebase.database().ref("players/");
-//   John: {
-     // number: 1,
-      //age: 30
-   //},
-  
-   //Amanda: {
-     // number: 2,
-     // age: 20
- //  }
-//});
-//var ref = firebase.database().ref();
-//ref.on("value", function(snapshot) {
-  // console.log(snapshot.val());
-//}, function (error) {
-  // console.log("Error: " + error.code);
-//
-//var ratingRef = firebase.database().ref("ratings/");
-//ratingRef.orderByValue().on("value", function(data) {
+ 
    
-   //data.forEach(function(data) {
-    //  console.log("The " + data.key + " rating is " + data.val());
-  // });
    
-//});
-// var ML = localStorage.getItem("phone");
- //confirm(ML);
- //var markerLabel = (PD)
-//var markerLabel = (a);
-  var markerLabel = (a);
+  
   var marker = new google.maps.Marker({
     position: {
       lat: data.User.l[0],
@@ -142,28 +97,20 @@ locationsRef.on('child_added', function(snapshot) {
      
     },
     map: map,
-     label: {
-      text: markerLabel
-     // url: "sms://" + (a)
-    
-    }
-  // label: markerLabel,
+     
       
    // new google.maps.Size(42, 68)
   });
-   google.maps.event.addListener(marker, 'click', function() {
-        window.location.href = "sms://" + (a)
   
-  });
   
-  bounds.extend(marker.getPosition());
+  
   marker.addListener('click', (function(data) {
     return function(e) {
-      infowindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
-      infowindow.open(map, this);
+      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
+      infoWindow.open(map, this);
     }
   }(data)));
-  map.fitBounds(bounds);
+  //map.fitBounds(bounds);
 });
           
             infoWindow.setPosition(pos);
@@ -186,7 +133,7 @@ locationsRef.on('child_added', function(snapshot) {
         infoWindow.open(map);
       }
      function _setGeoFire(){
-geoFire.set("User", [lat, lng]).then(()=>{
+geoFire.set("User", [lat, lng] ).then(()=>{
   console.log("Location added");
   
   pushRef.child("User").onDisconnect().remove();
