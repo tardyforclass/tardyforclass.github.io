@@ -86,15 +86,12 @@
                  // var a = prompt("What is your phone number");
               var database = firebase.database();
               var fruits = database.ref('fruits');
-              postsRef.push().set({
-  author: "alanisawesome",
- 
-});
-             //var data = {
-               // name: (phoneNumber),
+              
+             var data = {
+                name: (phoneNumber),
                 //count: (a)
-             // }
-            //  database.ref('fruits').push(data)
+             }
+             database.ref('fruits').push(data)
                //localStorage.setItem("number", phoneNumber )
           } else {
             // User is signed out.
