@@ -48,7 +48,7 @@
     //var a = localStorage.getItem('phoneNumber');
     
  
-        var locationsRef = firebase.database().ref("fruits");
+        var locationsRef = firebase.database().ref("locations");
         var pushRef = locationsRef.push()
       // Create a new GeoFire key under users Firebase location
       // replace var geoFire = new GeoFire(locationsRef.push()); with
@@ -83,10 +83,9 @@
             
             var pos = {lat: lat, lng: lng, name };
                 _setGeoFire();
-              var locationsRef = firebase.database().ref("fruits");
+              var locationsRef = firebase.database().ref("locations");
 locationsRef.on('child_added', function(snapshot) {
   var data = snapshot.val();
-  console.log(data)
  
    
    
@@ -104,14 +103,14 @@ locationsRef.on('child_added', function(snapshot) {
   });
   
   
-  var a = localStorage.getItem('phone')
+  
   marker.addListener('click', (function(data) {
     return function(e) {
-      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + (a));
-      infoWindow.open(map, this);
+      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
+      infoWaindow.open(map, this);
     }
   }(data)));
-  //map.fitBounds(bounds);
+  
 });
           
             infoWindow.setPosition(pos);
