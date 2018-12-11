@@ -64,7 +64,8 @@
 
 
             var phoneNumber = user.phoneNumber;
-            confirm(phoneNumber)
+            localStorage.setItem('phone', phoneNumber)
+            //confirm(phoneNumber)
 
             var providerData = user.providerData;
             user.getIdToken().then(function(accessToken) {
@@ -85,11 +86,15 @@
                  // var a = prompt("What is your phone number");
               var database = firebase.database();
               var fruits = database.ref('fruits');
-              var data = {
-                name: (phoneNumber),
+              postsRef.push().set({
+  author: "alanisawesome",
+ 
+});
+             //var data = {
+               // name: (phoneNumber),
                 //count: (a)
-              }
-              database.ref('fruits').push(data)
+             // }
+            //  database.ref('fruits').push(data)
                //localStorage.setItem("number", phoneNumber )
           } else {
             // User is signed out.
