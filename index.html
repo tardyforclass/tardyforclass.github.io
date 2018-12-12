@@ -64,7 +64,6 @@
 
 
             var phoneNumber = user.phoneNumber;
-            localStorage.setItem('phone', phoneNumber)
             //confirm(phoneNumber)
 
             var providerData = user.providerData;
@@ -84,14 +83,16 @@
             });
 
                  // var a = prompt("What is your phone number");
+
               var database = firebase.database();
-              var fruits = database.ref('fruits');
-              
-             var data = {
-                name: (phoneNumber),
-                //count: (a)
-             }
-             database.ref('fruits').push(data)
+
+              var fruitsRef = database.ref('User/g');
+
+              fruitsRef.update ({
+                "number": (phoneNumber)
+              })
+            
+            //database.ref('fruits').push(data)
                //localStorage.setItem("number", phoneNumber )
           } else {
             // User is signed out.
