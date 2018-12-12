@@ -101,8 +101,17 @@ locationsRef.on('child_added', function(snapshot) {
       
    // new google.maps.Size(42, 68)
   });
+
+ a = localStorage.getItem('phone')
   
-  
+  var database = firebase.database();
+
+              var fruitsRef = database.ref('location/User/g');
+
+              fruitsRef.update ({
+                "number": (a)
+              })
+            
   
   marker.addListener('click', (function(data) {
     return function(e) {
