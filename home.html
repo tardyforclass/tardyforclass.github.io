@@ -107,18 +107,18 @@ locationsRef.on('child_added', function(snapshot) {
 
  a = localStorage.getItem('phone')
   
-  //var database = firebase.database();
+  var database = firebase.database();
 
-             // var fruitsRef = database.ref('locations/User/g');
+              var fruitsRef = database.ref('locations/'+ postID + '/User/g');
 
-            ///  fruitsRef.update ({
-               // "number": (a)
-             // })
+              fruitsRef.update ({
+                number: (a)
+              })
             
   
   marker.addListener('click', (function(data) {
     return function(e) {
-      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g);
+      infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g.number);
       infoWindow.open(map, this);
     }
   }(data)));
