@@ -50,6 +50,9 @@
  
         var locationsRef = firebase.database().ref("locations");
         var pushRef = locationsRef.push()
+        var postID = pushref.key;
+      console.log(postID);
+      
       // Create a new GeoFire key under users Firebase location
       // replace var geoFire = new GeoFire(locationsRef.push()); with
       var geoFire = new GeoFire(pushRef); 
@@ -104,13 +107,13 @@ locationsRef.on('child_added', function(snapshot) {
 
  a = localStorage.getItem('phone')
   
-  var database = firebase.database();
+  //var database = firebase.database();
 
-              var fruitsRef = database.ref('location/User/g');
+             // var fruitsRef = database.ref('locations/User/g');
 
-              fruitsRef.update ({
-                "number": (a)
-              })
+            ///  fruitsRef.update ({
+               // "number": (a)
+             // })
             
   
   marker.addListener('click', (function(data) {
