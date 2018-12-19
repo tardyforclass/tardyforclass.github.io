@@ -175,7 +175,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
 });
 
 function startRefresh() {
-    setTimeout(startRefresh,1000);
+    setTimeout(startRefresh,9000);
     $.get('reload.html', function(data) {
         $('#map').html(data);    
     });
