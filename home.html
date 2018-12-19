@@ -174,7 +174,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
     $.ajax({
         url: 'home.html',
         success: function(res) {
-          $('#map').html(res.data);   
+          $('.map').html(res.data);   
         }
     });
 }, 10000);
