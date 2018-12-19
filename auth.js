@@ -1,4 +1,4 @@
- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap"
 
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
