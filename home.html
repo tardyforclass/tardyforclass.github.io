@@ -163,14 +163,21 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
-      setInterval(function() {
-    $.ajax({
-        url: 'reload.html',
-        success: function(res) {
-          $('.map').html(res.data);   
+    $(document).ready(function() {
+    loadData();
+});
+
+var loadData = function() {
+    $.ajax({    
+        type: "GET",
+        url: "reload.html",             
+        dataType: "html",                   
+        success: function(response) {                    
+            $(".map").html(response);
+            setTimeout(loadData, 5000); 
         }
     });
-}, 90000);
+};
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
