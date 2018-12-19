@@ -163,17 +163,14 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
-      
-       $(function() {
-    startRefresh();
-});
-
-function startRefresh() {
-    setTimeout(startRefresh,9000);
-    $.get('reload.html', function(data) {
-        $('#map').html(data);    
+      setInterval(function() {
+    $.ajax({
+        url: 'reload.html',
+        success: function(res) {
+          $('.map').html(res.data);   
+        }
     });
-}
+}, 90000);
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
