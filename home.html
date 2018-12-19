@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
     <title>Carryr</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -162,15 +163,8 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
-    </script>
-    <script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
-    </script>
-
-
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script>
-      $(function() {
+      
+       $(function() {
     startRefresh();
 });
 
@@ -180,7 +174,12 @@ function startRefresh() {
         $('#map').html(data);    
     });
 }
+    </script>
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
+    </script>
 
-</script>
+
+  
   </body>
 </html>
