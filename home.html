@@ -115,7 +115,7 @@
 
               marker.addListener('click', (function (data) {
                 return function (e) {
-                  infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + data.User.g.number);
+                  infoWindow.setContent(this.getPosition().toUrlValue(6) + "<br>" + "<a href=" + data.User.g.number + ">Click");
                   infoWindow.open(map, this);
                 }
               }(data)));
