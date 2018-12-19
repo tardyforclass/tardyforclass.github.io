@@ -1,5 +1,70 @@
- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carryr</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <!-- Place this inside the HTML head; don't use async defer for now -->
 
+    
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
+
+  <script>
+        
+        var config = {
+    apiKey: "",
+    authDomain: "carrier-35d7c.firebaseapp.com",
+    databaseURL: "https://carrier-35d7c.firebaseio.com",
+    projectId: "carrier-35d7c",
+    storageBucket: "carrier-35d7c.appspot.com",
+    messagingSenderId: "827792028763"
+  };
+        if (!firebase.apps.length) {
+            firebase.initializeApp(config);
+        }
+        
+        //Create a node at firebase location to add locations as child keys
+        //var locationsRef = firebase.database().ref("locations");
+        
+        // Create a new GeoFire key under users Firebase location
+        //var geoFire = new GeoFire(locationsRef.push());
+        //Create a node at firebase location to add locations as child keys
+        //confirm(firebase.auth().currentUser)
+    
+    //var a = localStorage.getItem('phoneNumber');
+    
+ 
+        var locationsRef = firebase.database().ref("locations");
+        var pushRef = locationsRef.push()
+        var postID = pushRef.key;
+      console.log(postID);
+      
+      // Create a new GeoFire key under users Firebase location
+      // replace var geoFire = new GeoFire(locationsRef.push()); with
+      var geoFire = new GeoFire(pushRef); 
+      </script>
+
+
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      
+    
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -97,4 +162,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
-   
+    </script>
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
+    </script>
