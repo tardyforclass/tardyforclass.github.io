@@ -62,16 +62,6 @@
   </head>
   <body>
     <div id="map"></div>
-
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script>
-      $(document).ready(function() {
-  $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
-  setInterval(function() {
-    $('#map').load('#map');
-  }, 3000); // the "3000" 
-});
-</script>
     <script>
       
     
@@ -176,5 +166,16 @@ geoFire.set("User", [lat, lng] ).then(()=>{
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+  $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
+  setInterval(function() {
+    $('#map').load('#map');
+  }, 5000); // the "3000" 
+});
+</script>
   </body>
 </html>
