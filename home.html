@@ -170,16 +170,14 @@ geoFire.set("User", [lat, lng] ).then(()=>{
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script>
-      $(function() {
-    startRefresh();
-});
-
-function startRefresh() {
-    setTimeout(startRefresh,1000);
-    $.get('home.html', function(data) {
-        $('#map').html(data);    
+      setInterval(function() {
+    $.ajax({
+        url: 'home.html',
+        success: function(res) {
+          $('#map').html(res.data);   
+        }
     });
-}
+}, 10000);
 </script>
   </body>
 </html>
