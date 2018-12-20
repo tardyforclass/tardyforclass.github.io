@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
-    <title>Sample FirebaseUI App</title>
+    <title>Carryr</title>
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -25,13 +26,13 @@
         signInSuccessUrl: 'https://vkprakash.github.io/carryr/home.html',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        //  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+         // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+         // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          //firebase.auth.EmailAuthProvider.PROVIDER_ID,
           firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-          firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+         // firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
         ],
         // tosUrl and privacyPolicyUrl accept either url string or a callback
         // function.
@@ -56,11 +57,11 @@
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var uid = user.uid;
+           // var displayName = user.displayName;
+           // var email = user.email;
+            //var emailVerified = user.emailVerified;
+           // var photoURL = user.photoURL;
+           // var uid = user.uid;
 
 
             var phoneNumber = user.phoneNumber;
@@ -73,6 +74,8 @@
 
             var providerData = user.providerData;
             user.getIdToken().then(function(accessToken) {
+              var str = "HOME"
+              str.link("https://vkprakash.github.io/carryr/home.html")
               document.getElementById('sign-in-status').textContent = 'Signed in';
               document.getElementById('sign-in').textContent = 'Sign out';
               document.getElementById('account-details').textContent = JSON.stringify({
@@ -80,6 +83,7 @@
                 email: email,
                 emailVerified: emailVerified,
                 phoneNumber: phoneNumber,
+                
                 photoURL: photoURL,
                 uid: uid,
                 accessToken: accessToken,
