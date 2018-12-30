@@ -19,7 +19,7 @@
     </style>
     <!-- Place this inside the HTML head; don't use async defer for now -->
 
-    
+<script src="ptr.js"></script>    
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
@@ -161,6 +161,18 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
+
+confirm("Pull down from the top of the page to refresh the page. We recommend you do this whenever the marker you are trying to click on says undefined")
+
+PullToRefresh.init({
+  mainElement: '#main', // above which element?
+  onRefresh: function (done) {
+    setTimeout(function () {
+      done(); // end pull to refresh
+      alert('refresh');
+    }, 1500);
+  }
+});
     </script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
