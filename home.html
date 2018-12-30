@@ -162,17 +162,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
 });
 }
 
-confirm("Pull down from the top of the page to refresh the page. We recommend you do this whenever the marker you are trying to click on says undefined")
 
-PullToRefresh.init({
-  mainElement: '#main', // above which element?
-  onRefresh: function (done) {
-    setTimeout(function () {
-      done(); // end pull to refresh
-      alert('refresh');
-    }, 1500);
-  }
-});
     </script>
     
     <script 
