@@ -17,7 +17,10 @@
         padding: 0;
       }
     </style>
-    <!-- Place this inside the HTML head; don't use async defer for now -->
+    <!-- Place this inside the H
+      TML head; don't use async defer for now -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script src="ptr.js"></script>    
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -83,28 +86,21 @@
         navigator.geolocation.getCurrentPosition(function (position) {
           lat = position.coords.latitude;
           lng = position.coords.longitude;
-
           var pos = { lat: lat, lng: lng, name };
           _setGeoFire();
           var locationsRef = firebase.database().ref("locations");
           locationsRef.on('child_added', function (snapshot) {
             var data = snapshot.val();
             //console.log(data, "Prueba memo");
-
-
              if (data && data.User && data.User.l) {
               var marker = new google.maps.Marker({
                 position: {
                   lat: data.User.l[0],
                   lng: data.User.l[1]
-
                 },
                 map: map,
-
-
                 // new google.maps.Size(42, 68)
               });
-
               a = localStorage.getItem('phone')
   
   var database = firebase.database();
@@ -112,7 +108,6 @@
               fruitsRef.update ({
                 number: (a)
               })
-
               marker.addListener('click', (function (data) {
                 return function (e) {
                   //var str = "click"
@@ -121,10 +116,7 @@
                 }
               }(data)));
             }
-
-
           });
-
           infoWindow.setPosition(pos);
           infoWindow.setContent('Current Location');
           infoWindow.open(map);
@@ -137,14 +129,6 @@
         handleLocationError(false, infoWindow, map.getCenter());
       }
     }
-
-
-
-
-
-
-
-
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -161,13 +145,23 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
-
-
     </script>
     
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
+    <button id="MyButton" class="btn btn-warning">Refresh</button>
+    <script>
+       $("#MyButton").click(function() {
+    $(document).ready(function() {
+    setInterval(function() {
+        $.get('home.html', function (data) {
+            $('.map').html(data);
+        });
+    }, ); 
+});
+  }); 
+</script>
      <h1>hi</h1>
   </body>
  
