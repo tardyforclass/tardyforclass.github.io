@@ -160,10 +160,18 @@ geoFire.set("User", [lat, lng] ).then(()=>{
     <center><h3>hi</h3></center>
      <button id="MyButton" class="btn btn-warning">Refresh</button>
     <script>
-       $("#MyButton").click(function() {
-      $("#map").load("carryr/home.html #map");
-   
-  }); 
+   function reload(url){
+       $.get(url, function(data){      // $.get will get the content of the page defined in url and will return it in **data** variable 
+            $('#map').append(data);
+       }
+    }
+
+$('#Mybutton').click(function(e){ 
+        e.preventDefault();
+        var url = 'https://vkprakash.github.io/carryr/reload.html';
+        reload(url);  // this calls the reload function
+});
+
     </script>
   </body>
  
