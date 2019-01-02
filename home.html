@@ -163,7 +163,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
    $("#MyButton").click(function() {
    setInterval(function() {
     $.ajax({
-        url: 'home.html',
+        url: 'reload.html',
         success: function(res) {
           $('.map').html(res.data);   
         }
