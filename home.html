@@ -22,7 +22,7 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  
+<script src="ptr.js"></script>    
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
@@ -64,7 +64,6 @@
 
   </head>
   <body>
-    
     <div id="map"></div>
     <script>
       
@@ -146,24 +145,19 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   console.log(error);
 });
 }
-      
-      
-      
-      
     </script>
     
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
-   
-    
-    <center><h3>hi</h3></center>
-     <button id="MyButton" class="btn btn-warning">Refresh</button>
+    <button id="MyButton" class="btn btn-warning">Refresh</button>
     <script>
        $("#MyButton").click(function() {
-   $("#map").load(reload.html + " #map>*", "");
+         location.href = "home.html"
+   $("#map").load(location.href + " #map>*", "");
   }); 
 </script>
+     <h1>hi</h1>
   </body>
  
 </html>
