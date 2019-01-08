@@ -160,18 +160,10 @@ geoFire.set("User", [lat, lng] ).then(()=>{
     <center><h3>hi</h3></center>
      <button id="MyButton" class="btn btn-warning">Refresh</button>
     <script>
-   $("#MyButton").click(function() {
-   setInterval(function() {
-    $.ajax({
-        url: 'reload.html',
-        success: function(res) {
-          $('.map').html(res.data);   
-        }
-    });
-}, 10000);
+       $("#MyButton").click(function() {
+   $("#map").load(location.href + " #map>*", "");
   }); 
-
-    </script>
+</script>
   </body>
  
 </html>
