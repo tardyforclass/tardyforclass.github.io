@@ -150,14 +150,14 @@ geoFire.set("User", [lat, lng] ).then(()=>{
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
-    <center><button id="MyButton" class="btn btn-warning">Refresh</button></center>
+    <center><button id="MyButton" class="btn btn-warning"Load #</button></center>
     <script>
        $("#MyButton").click(function() {
          location.href = "home.html"
    $("#map").load(location.href + " #map>*", "");
   }); 
 </script>
-     <h1>Click to refresh</h1>
+     <h3>If you click on a marker and a phone number is not displayed, then click the "load #" button. If it still doesn't show up, that means that another user is currently using that marker </h3>
   </body>
  
 </html>
