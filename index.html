@@ -74,10 +74,9 @@
 
             var providerData = user.providerData;
             user.getIdToken().then(function(accessToken) {
-              var str = "HOME"
-              str.link("https://vkprakash.github.io/carryr/home.html")
               document.getElementById('sign-in-status').textContent = 'Signed in';
               document.getElementById('sign-in').textContent = 'Sign out';
+              document.write("<a href='" + vkprakash.github.io/carryr/home.html + "'>" + click here to go home + "</a>");
               document.getElementById('account-details').textContent = JSON.stringify({
                 displayName: displayName,
                 email: email,
@@ -120,7 +119,7 @@
   <body>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
          Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome to My Awesome App</h1>
+    <h1>Welcome To Carryr</h1>
     <div id="firebaseui-auth-container"></div>
     <div id="sign-in-status"></div>
     <div id="sign-in"></div>
