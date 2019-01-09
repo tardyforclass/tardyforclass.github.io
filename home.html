@@ -194,8 +194,8 @@
               })
               marker.addListener('click', (function (data) {
                 return function (e) {
-                  var str = (a)
-                  infoWindow.setContent(str.link("sms://" +  (a))) ;
+                  var str = (data.User.g.number)
+                  infoWindow.setContent(str.link("sms://" +  (data.User.g.number))) ;
                   infoWindow.open(map, this);
                 }
               }(data)));
