@@ -194,8 +194,13 @@
               })
               marker.addListener('click', (function (data) {
                 return function (e) {
-                  var str = (data.User.g.number)
-                  infoWindow.setContent(str.link("sms://" + (data.User.g.number))) ;
+                 var a = document.createElement('a');
+                 var linkText = document.createTextNode(data.User.g.number);
+                 a.appendChild(linkText);
+                 a.title = (data.User.g.number);
+                 a.href = "sms://" + (data.User.g.number);
+
+                  infoWindow.setContent(document.body.appendChild(a));
                   infoWindow.open(map, this);
                 }
               }(data)));
