@@ -89,6 +89,7 @@
     <title>Carryr</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 <body>
   <center><h1> Home</h1></center>
@@ -104,6 +105,14 @@
 <center><input type="button" class="button" value="Start App" onclick="window.location.href='https://vkprakash.github.io/carryr/home.html'" /> </center>
 	
 <center><input type="button" class="myButton" value="Sign In With New Phone Number" onclick="window.location.href='https://vkprakash.github.io/carryr/index.html'" /> </center>
+	<script>
+       $("#myButton").click(function() {
+         localStorage.removeItem("phone");
+
+         
+   
+  }); 
+</script>
   
 </form>
   </body>
