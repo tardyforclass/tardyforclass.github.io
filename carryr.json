@@ -26,7 +26,7 @@
               "components": [
                 {
                   "type": "label",
-                  "text": "Welcome To Carryr!",
+                  "text": "",
                   "style": {
                     "align": "center",
                     "font": "Courier-Bold",
@@ -50,7 +50,8 @@
                   "style": {
                     "align": "center",
                     "font": "HelveticaNeue-Bold",
-                    "size": "50"
+                    "size": "50",
+                    "color": "#ff3333"
                   }
                 }
               ]
