@@ -63,11 +63,7 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "",
-              "href": {
-                "url": "https://jasonette.github.io/Jasonpedia/demo.json",
-                "fresh": "true"
-              }
+              
             },
             {
               "type": "label",
