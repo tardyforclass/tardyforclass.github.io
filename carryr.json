@@ -61,11 +61,11 @@
                 "padding": "10",
                 "color": "#000000",
                 "font": "HelveticaNeue",
-                "size": ""
+                "size": "12"
               },
               "text": "",
               "href": {
-                "url": "https://google.com",
+                "url": "https://jasonette.github.io/Jasonpedia/demo.json",
                 "fresh": "true"
               }
             },
@@ -81,7 +81,7 @@
               "text": "Click Me To Get Started",
               "href": {
                 "url": "http://vkprakash.github.io/carryr/",
-                "view": "Web"
+                "view": "Web",
                 "display": "standalone"
               }
             },
@@ -96,7 +96,7 @@
               },
               "text": "",
               "href": {
-                "url": "https://google.com",
+                "url": "https://jasonette.github.io/documentation",
                 "view": "Web"
               }
             }
