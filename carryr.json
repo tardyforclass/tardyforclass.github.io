@@ -1,0 +1,8 @@
+"background" : {
+	"type": "html",
+	"url": "http://vkprakash.github.io/carryr",
+	"action": {
+		"trigger": "navigate"
+	}
+
+}
