@@ -1,7 +1,7 @@
 {
   "$jason": {
     "head": {
-      "title": "{ ˃̵̑ᴥ˂̵̑}",
+      "title": "Carryr",
       "actions": {
         "$foreground": {
           "type": "$reload"
@@ -26,7 +26,7 @@
               "components": [
                 {
                   "type": "label",
-                  "text": "It's ALIVE!",
+                  "text": "Welcome to Carryr!",
                   "style": {
                     "align": "center",
                     "font": "Courier-Bold",
@@ -35,7 +35,7 @@
                 },
                 {
                   "type": "label",
-                  "text": "This is a demo app. You can make your own app by changing the url inside settings.plist",
+                  "text": "",
                   "style": {
                     "align": "center",
                     "font": "Courier",
@@ -45,7 +45,7 @@
                 },
                 {
                   "type": "label",
-                  "text": "{ ˃̵̑ᴥ˂̵̑}",
+                  "text": "Carryr",
                   "style": {
                     "align": "center",
                     "font": "HelveticaNeue-Bold",
@@ -63,7 +63,7 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "Check out Live DEMO",
+              "text": "",
               "href": {
                 "url": "https://jasonette.github.io/Jasonpedia/demo.json",
                 "fresh": "true"
@@ -72,13 +72,13 @@
             {
               "type": "label",
               "style": {
-                "align": "right",
+                "align": "center",
                 "padding": "10",
                 "color": "#000000",
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "Watch the tutorial video",
+              "text": "Click Me To Get Started",
               "href": {
                 "url": "http://vkprakash.github.io/carryr/",
                 "view": "Web"
@@ -91,9 +91,9 @@
                 "padding": "10",
                 "color": "#000000",
                 "font": "HelveticaNeue",
-                "size": "12"
+                "size": "30"
               },
-              "text": "View documentation",
+              "text": "",
               "href": {
                 "url": "https://jasonette.github.io/documentation",
                 "view": "Web"
