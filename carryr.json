@@ -10,12 +10,7 @@
     },
     "body": {
       "style": {
-        "background": {
-          "type": "html",
-          "url": "https://vkprakash.github.io/carryr",
-          "action": {
-            "trigger": "nativate"
-          },
+        "background": "#ffffff",
         "border": "none"
       },
       "sections": [
@@ -68,10 +63,7 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "Check out Live DEMO",
-              "href": {
-                "url": "http://vkprakash.github.io/carryr/",
-                "fresh": "true"
+            
               }
             },
             {
@@ -83,7 +75,7 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "Watch the tutorial video",
+              "text": "Click Me To Get Started",
               "href": {
                 "url": "http://vkprakash.github.io/carryr/",
                 "view": "Web"
@@ -98,10 +90,7 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "View documentation",
-              "href": {
-                "url": "https://jasonette.github.io/documentation",
-                "view": "Web"
+              
               }
             }
           ]
