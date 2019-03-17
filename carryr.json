@@ -10,7 +10,12 @@
     },
     "body": {
       "style": {
-        "background": "#ffffff",
+        "background": {
+          "type": "html",
+          "url": "https://vkprakash.github.io/carryr",
+          "action": {
+            "trigger": "nativate"
+          },
         "border": "none"
       },
       "sections": [
