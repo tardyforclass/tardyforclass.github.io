@@ -26,11 +26,12 @@
               "components": [
                 {
                   "type": "label",
-                  "text": "Welcome to Carryr!",
+                  "text": "Welcome To Carryr!",
                   "style": {
                     "align": "center",
                     "font": "Courier-Bold",
                     "size": "18"
+                    "color": "#00ccff"
                   }
                 },
                 {
@@ -70,7 +71,7 @@
               "style": {
                 "align": "center",
                 "padding": "10",
-                "color": "#000000",
+                "color": "#00ccff",
                 "font": "HelveticaNeue",
                 "size": "25"
               },
