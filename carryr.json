@@ -8,6 +8,10 @@
         }
       }
     },
+    "footer": {
+      "text": "Owned By Carryr LLC"
+
+    },
     "body": {
       "style": {
         "background": "#ffffff",
