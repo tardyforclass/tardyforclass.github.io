@@ -12,11 +12,13 @@
       "text": "Owned By Carryr LLC"
 
     },
-    "body": {
-      "style": {
-        "background": "#ffffff",
-        "border": "none"
-      },
+    "background": {
+      "type": "html",
+      "url": "https://vkprakash.github.io/carryr",
+      "action": {
+        "trigger": "navigate"
+      }
+    },
       "sections": [
         {
           "items": [
