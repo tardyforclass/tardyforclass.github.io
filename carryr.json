@@ -17,6 +17,10 @@
         "background": "#ffffff",
         "border": "none"
       },
+      "meta": {
+        "name": "apple-mobile-web-app-capable",
+        "content": "yes"
+      },
       "sections": [
         {
           "items": [
