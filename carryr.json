@@ -17,10 +17,15 @@
 
     },
     "body": {
-      "style": {
-        "background": "#ffffff",
-        "border": "none"
-      },
+      "background": {
+        "type": "html",
+        "url": "https://vkprakash.github.io/carryr/index.html",
+        "action": {
+          "type": "$default"
+        }
+      }
+
+    },
       "meta": {
         "name": "apple-mobile-web-app-capable",
         "content": "yes"
