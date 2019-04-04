@@ -8,14 +8,16 @@
         }
       }
     },
-    "header" : {
+    "header": {
       "title": {
-      "type": "image",
-      "url": "https://docs.google.com/drawings/d/e/2PACX-1vQ5OOTYNUqtY098e7H4tTm49TlaPqJ_ycXqqIrH6ZXh6fKqLR4JjtrRg7Qng5GiLIcmT1LLXdow9VuR/pub?w=960&amp;h=720"
+        "type": "image",
+        "url": "https://leanplum-wordpress.storage.googleapis.com/Good-Travel-App-UX-Appsee-header.jpg",
+
 
       }
 
     },
+
     "body": {
       "background": {
         "type": "html",
@@ -26,6 +28,7 @@
       }
 
     },
+    
       "meta": {
         "name": "apple-mobile-web-app-capable",
         "content": "yes"
