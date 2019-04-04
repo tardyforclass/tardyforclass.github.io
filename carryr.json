@@ -62,7 +62,7 @@
                 },
                 {
                   "type": "label",
-                  "text": "Carryr",
+                  "text": "",
                   "style": {
                     "align": "center",
                     "font": "HelveticaNeue-Bold",
@@ -92,7 +92,7 @@
                 "font": "HelveticaNeue",
                 "size": "25"
               },
-              "text": "Click Me To Get Started",
+              "text": "",
               "href": {
                 "url": "http://vkprakash.github.io/carryr/",
                 "view": "Web",
