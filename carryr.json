@@ -28,10 +28,7 @@
       }
 
     },
-      "meta": {
-        "name": "apple-mobile-web-app-capable",
-        "content": "yes"
-      },
+     
       "sections": [
         {
           "items": [
@@ -44,73 +41,24 @@
               },
               "components": [
                 {
-                  "type": "label",
-                  "text": "",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier-Bold",
-                    "size": "18",
-                    "color": "#00ccff"
-                  }
+                  
                 },
                 {
-                  "type": "label",
-                  "text": "",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier",
-                    "padding": "30",
-                    "size": "14"
-                  }
+                 
                 },
                 {
-                  "type": "label",
-                  "text": "",
-                  "style": {
-                    "align": "center",
-                    "font": "HelveticaNeue-Bold",
-                    "size": "50",
-                    "color": "#ff3333"
-                  }
+                  
                 }
               ]
             },
             {
-              "type": "label",
-              "style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "12"
-              },
+              
               
             },
             {
-              "type": "label",
-              "style": {
-                "align": "center",
-                "padding": "10",
-                "color": "#00ccff",
-                "font": "HelveticaNeue",
-                "size": "25"
-              },
-              "text": "",
-              "href": {
-                "url": "",
-                "view": "Web"
-               
-              }
-            },
-            {
-              "type": "label",
-              "style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "30"
-              }
+             
+              
+              
             }
           ]
         }
