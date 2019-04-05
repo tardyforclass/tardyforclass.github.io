@@ -22,7 +22,10 @@
     },
     "background": {
       "type": "html",
-      "url": "http://vkprakash.github.io/carryr/index.html"
+      "url": "http://vkprakash.github.io/carryr/index.html",
+      "action": {
+        "type": "$default"
+      }
 
     },
       "meta": {
