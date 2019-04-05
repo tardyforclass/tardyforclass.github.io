@@ -1,39 +1,22 @@
 {
   "$jason": {
     "head": {
-      "offline": "true",
-      "title": "Carryr",
       "actions": {
-        "$foreground": {
-          "type": "$reload"
+        "displayBanner": {
+          "type": "$util.banner",
+          "options": {
+            "title": "Clicked",
+            "description": "Link {{$jason.url}} clicked!"
+          }
         }
       }
     },
     "body": {
-      "layers": [{
-        "type": "label",
-        "text" : "Back",
-        "style": {
-          "top": "10",
-          "right": "10",
-          "width": "100",
-          "height": "100",
-
-        },
-        "action": {
-          "type": "$back"
-        },
-
-      }],
-      "header": {
-        "title": "Carryrr"
-
-      },
       "background": {
         "type": "html",
-        "url": "https://vkprakash.github.io/carryr/index.html",
+        "url": "file://index.html",
         "action": {
-          "type": "$default"
+          "trigger": "displayBanner"
         }
       }
     }
