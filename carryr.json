@@ -9,13 +9,6 @@
       }
     },
     "body": {
-      "layers": [{
-        "type": "label",
-        "text": "back",
-        "action": {
-          "type": "$back"
-        }
-      }],
       "header": {
         "title": "Carryr"
 
