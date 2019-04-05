@@ -14,7 +14,7 @@
     "body": {
       "background": {
         "type": "html",
-        "url": "file://index.html",
+        "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
           "trigger": "displayBanner"
         }
