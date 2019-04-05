@@ -1,6 +1,7 @@
 {
   "$jason": {
     "head": {
+      "offline": "true",
       "title": "Carryr",
       "actions": {
         "$foreground": {
