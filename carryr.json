@@ -81,10 +81,10 @@
                 "size": "25"
               },
             "type": "label",
-            "text": "Clickk Me To Get Started",
+            "text": "Click Me To Get Started",
             "href": {
               "url": "https://vkprakash.github.io/carryr/index.html",
-              "type": "html"
+              "view": "web"
             }
             },
             {
