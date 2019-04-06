@@ -1,21 +1,42 @@
 {
   "$jason": {
     "head": {
-      "title": "Carryr",
+      "title": "Jasopedia",
+      "styles": {
+        "bold": {
+          "font": "HelveticaNeue-CondensedBold",
+          "size": "15"
+        },
+        "padded": {
+          "padding": "10"
+        },
+        "normal": {
+          "font": "HelveticaNeue",
+          "size": "12"
+        }
+      },
       "actions": {
         "$foreground": {
           "type": "$reload"
         }
       }
     },
-    "footer": {
-      "text": "Owned By Carryr LLC"
-
-    },
     "body": {
-      "style": {
-        "background": "#ffffff",
-        "border": "none"
+      "header": {
+        "title": "Jasonpedia",
+        "style": {
+          "background": "#8bb92d",
+          "color": "#ffffff",
+          "font": "AvenirNext-Bold",
+          "size": "14"
+        },
+        "menu": {
+          "text": "View JSON",
+          "href": {
+            "url": "https://github.com/Jasonette/Jasonpedia/blob/gh-pages/demo.json",
+            "view": "web"
+          }
+        }
       },
       "sections": [
         {
@@ -23,81 +44,116 @@
             {
               "type": "vertical",
               "style": {
-                "padding": "30",
-                "spacing": "20",
-                "align": "center"
+                "background": "rgba(14,122,254,0.1)",
+                "padding": "20"
+              },
+              "href": {
+                "url": "mailto:?subject=Documentation&body=https://jasonette.github.io/documentation",
+                "view": "app"
               },
               "components": [
                 {
                   "type": "label",
-                  "text": "",
+                  "text": "Send yourself Documentation",
+                  "class": "bold",
                   "style": {
-                    "align": "center",
-                    "font": "Courier-Bold",
-                    "size": "18",
-                    "color": "#00ccff"
-                  }
-                },
-                {
-                  "type": "label",
-                  "text": "",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier",
-                    "padding": "30",
-                    "size": "14"
-                  }
-                },
-                {
-                  "type": "label",
-                  "text": "Carryr",
-                  "style": {
-                    "align": "center",
-                    "font": "HelveticaNeue-Bold",
-                    "size": "50",
-                    "color": "#ff3333"
+                    "color": "rgb(14,122,254)"
                   }
                 }
               ]
-            },
-            {
-              "type": "label",
-              "style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "12"
-              },
-              
-            },
-            {
-              "type": "label",
-              "style": {
-                "align": "center",
-                "padding": "10",
-                "color": "#00ccff",
-                "font": "HelveticaNeue",
-                "size": "25"
-              },
-            "type": "label",
-            "text": "Click Me To Get Started",
-            "href": {
-              "url": "https://vkprakash.github.io/carryr/index.html",
-              "view": "web"
             }
+          ]
+        },
+        {
+          "header": {
+            "type": "vertical",
+            "style": {
+              "background": "#ebebeb"
+            },
+            "components": [{
+              "type": "label",
+              "class": "bold",
+              "text": "Tutorial"
+            }, {
+              "type": "label",
+              "class": "normal",
+              "text": "Simple demos to demonstrate how each module works. Also used for testing purposes."
+            }]
+          },
+          "items": [
+            {
+              "type": "label",
+              "text": "Core",
+              "class": "bold padded",
+              "href": {
+                "url": "https://jasonette.github.io/Jasonpedia/core/index.json"
+              }
             },
             {
               "type": "label",
-              "style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "30"
+              "text": "View",
+              "class": "bold padded",
+              "href": {
+                "url": "https://jasonette.github.io/Jasonpedia/view/index.json"
+              }
+            },
+            {
+              "type": "label",
+              "text": "Action",
+              "class": "bold padded",
+              "href": {
+                "url": "https://jasonette.github.io/Jasonpedia/action/index.json"
+              }
+            },
+            {
+              "type": "label",
+              "text": "Template",
+              "class": "bold padded",
+              "href": {
+                "url": "https://jasonette.github.io/Jasonpedia/template/index.json"
+              }
+            },
+            {
+              "type": "label",
+              "text": "Web Container",
+              "class": "bold padded",
+              "href": {
+                "url": "https://jasonette.github.io/Jasonpedia/webcontainer/index.json"
               }
             }
           ]
+        },
+        {
+          "header": {
+            "type": "vertical",
+            "style": {
+              "background": "#ebebeb"
+            },
+            "components": [{
+              "type": "label",
+              "class": "bold",
+              "text": "Showcase"
+            }, {
+              "type": "label",
+              "class": "normal",
+              "text": "Wrote a cool/useful JSON markup? Send a pull request to https://github.com/Jasonette/Jasonpedia"
+            }]
+          },
+          "items": [{
+            "type": "label",
+            "text": "Instagram",
+            "href": {
+              "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/home.json",
+              "transition": "modal"
+            }
+          }, {
+            "type": "label",
+            "text": "Twitter",
+            "href": {
+              "url": "https://raw.githubusercontent.com/Jasonette/Twitter-UI-example/master/home.json",
+              "transition": "modal"
+            }
+          }]
         }
       ]
     }
