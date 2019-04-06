@@ -1,145 +1,106 @@
 {
   "$jason": {
     "head": {
-      "title": "HTML Template",
+      "title": "Carryr",
       "actions": {
-        "$pull": {
-          "trigger": "reload"
-        },
-        "$show": {
-          "trigger": "reload"
-        },
-        "reload": {
-          "type": "$network.request",
-          "options": {
-            "url": "https://vkprakash.github.io/carryr/index.html",
-            "dataType": "html"
-          },
-          "success": {
-            "type": "$render",
-            "options": {
-              "type": "html"
-            },
-            "success": {
-              "type": "$util.toast",
-              "options": {
-                "text": "Refreshed"
-              }
-            }
-          }
+        "$foreground": {
+          "type": "$reload"
         }
+      }
+    },
+    "footer": {
+      "text": "Owned By Carryr LLC"
+
+    },
+    "body": {
+      "style": {
+        "background": "#ffffff",
+        "border": "none"
       },
-      "templates": {
-        "body": {
-          "header": {
-            "title": "HN",
-            "style": {
-              "background": "rgb(246, 246, 239)",
-              "theme": "light",
-              "color": "#000000"
-            },
-            "menu": {
-              "text": "View JSON",
-              "href": {
-                "url": "https://github.com/Jasonette/Jasonpedia/blob/gh-pages/template/html.json",
-                "view": "web"
-              }
-            }
-          },
-          "style": {
-            "background": "rgb(246, 246, 239)",
-            "color": "#000000",
-            "border": "none"
-          },
-          "sections": [
+      "sections": [
+        {
+          "items": [
             {
-              "header": {
-                "type": "horizontal",
-                "style": {
-                  "background": "rgba(14,122,254,0.1)",
-                  "padding": "20"
-                },
-                "components": [
-                  {
-                    "style": {
-                      "size": "12"
-                    },
-                    "type": "label",
-                    "text": "This demo parses an HTML content loaded from Hacker News (https://news.ycombinator.com) and renders it into native view"
-                  }
-                ]
+              "type": "vertical",
+              "style": {
+                "padding": "30",
+                "spacing": "20",
+                "align": "center"
               },
-              "items": {
-                "{{#each $jason.find('tr.athing')}}": {
-                  "type": "horizontal",
-                  "href": {
-                    "url": "https://news.ycombinator.com/{{$(this).next().find('.subtext .age a').attr('href')}}",
-                    "view": "Web"
-                  },
-                  "menu": {
-                    "items": [
-                      {
-                        "text": "Visit\nSite",
-                        "action": {
-                          "type": "$href",
-                          "options": {
-                            "url": "{{$(this).find('td.title a').attr('href')}}",
-                            "view": "Web"
-                          }
-                        }
-                      }
-                    ]
-                  },
+              "components": [
+                {
+                  "type": "label",
+                  "text": "",
                   "style": {
-                    "padding": "4",
-                    "spacing": "10",
-                    "color": "#ff6600",
-                    "background": "rgb(246, 246, 239)"
-                  },
-                  "components": [
-                    {
-                      "type": "label",
-                      "style": {
-                        "font": "HelveticaNeue-Bold",
-                        "size": "10",
-                        "padding": "10",
-                        "width": "50"
-                      },
-                      "text": "{{($(this).next().find('.subtext .score').text().split(' ')[0]).toString()+'\\npoints'}}"
-                    },
-                    {
-                      "type": "vertical",
-                      "style": {
-                        "spacing": "5"
-                      },
-                      "components": [
-                        {
-                          "type": "label",
-                          "text": "{{$(this).find('td.title > a').text()}}",
-                          "style": {
-                            "font": "HelveticaNeue-Bold",
-                            "color": "#ff6600",
-                            "size": "16"
-                          }
-                        },
-                        {
-                          "type": "label",
-                          "style": {
-                            "color": "#aaaaaa",
-                            "font": "HelveticaNeue",
-                            "size": "13"
-                          },
-                          "text": "{{$(this).find('td.title .sitebit').text() + '   ' + $(this).next().find('.subtext').find(':nth-child(3)').text()}}"
-                        }
-                      ]
-                    }
-                  ]
+                    "align": "center",
+                    "font": "Courier-Bold",
+                    "size": "18",
+                    "color": "#00ccff"
+                  }
+                },
+                {
+                  "type": "label",
+                  "text": "",
+                  "style": {
+                    "align": "center",
+                    "font": "Courier",
+                    "padding": "30",
+                    "size": "14"
+                  }
+                },
+                {
+                  "type": "label",
+                  "text": "Carryr",
+                  "style": {
+                    "align": "center",
+                    "font": "HelveticaNeue-Bold",
+                    "size": "50",
+                    "color": "#ff3333"
+                  }
                 }
+              ]
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "right",
+                "padding": "10",
+                "color": "#000000",
+                "font": "HelveticaNeue",
+                "size": "12"
+              },
+              
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "center",
+                "padding": "10",
+                "color": "#00ccff",
+                "font": "HelveticaNeue",
+                "size": "25"
+              },
+            "type": "label",
+            "text": "Click Me To Get Started",
+            "href": {
+              "url": "https://vkprakash.github.io/carryr/index.html",
+              "view": "web",
+              "type": "html"
+            }
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "right",
+                "padding": "10",
+                "color": "#000000",
+                "font": "HelveticaNeue",
+                "size": "30"
               }
             }
           ]
         }
-      }
+      ]
     }
   }
 }
