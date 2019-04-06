@@ -1,7 +1,7 @@
 {
   "$jason": {
     "head": {
-      "title": "Jasopedia",
+      "title": "Carryr",
       "styles": {
         "bold": {
           "font": "HelveticaNeue-CondensedBold",
@@ -23,7 +23,7 @@
     },
     "body": {
       "header": {
-        "title": "Jasonpedia",
+        "title": "Carryr",
         "style": {
           "background": "#8bb92d",
           "color": "#ffffff",
@@ -31,11 +31,7 @@
           "size": "14"
         },
         "menu": {
-          "text": "View JSON",
-          "href": {
-            "url": "https://github.com/Jasonette/Jasonpedia/blob/gh-pages/demo.json",
-            "view": "web"
-          }
+          
         }
       },
       "sections": [
@@ -47,18 +43,10 @@
                 "background": "rgba(14,122,254,0.1)",
                 "padding": "20"
               },
-              "href": {
-                "url": "mailto:?subject=Documentation&body=https://jasonette.github.io/documentation",
-                "view": "app"
-              },
+              
               "components": [
                 {
-                  "type": "label",
-                  "text": "Send yourself Documentation",
-                  "class": "bold",
-                  "style": {
-                    "color": "rgb(14,122,254)"
-                  }
+                 
                 }
               ]
             }
@@ -83,15 +71,15 @@
           "items": [
             {
               "type": "label",
-              "text": "Core",
+              "text": "Click Me To Get Started",
               "class": "bold padded",
               "href": {
-                "url": "https://jasonette.github.io/Jasonpedia/core/index.json"
+                "url": "https://vkprakash.github.io/carryr/index.html"
               }
             },
             {
               "type": "label",
-              "text": "View",
+              "text": "",
               "class": "bold padded",
               "href": {
                 "url": "https://jasonette.github.io/Jasonpedia/view/index.json"
@@ -99,7 +87,7 @@
             },
             {
               "type": "label",
-              "text": "Action",
+              "text": "",
               "class": "bold padded",
               "href": {
                 "url": "https://jasonette.github.io/Jasonpedia/action/index.json"
@@ -107,7 +95,7 @@
             },
             {
               "type": "label",
-              "text": "Template",
+              "text": "",
               "class": "bold padded",
               "href": {
                 "url": "https://jasonette.github.io/Jasonpedia/template/index.json"
@@ -115,7 +103,7 @@
             },
             {
               "type": "label",
-              "text": "Web Container",
+              "text": "",
               "class": "bold padded",
               "href": {
                 "url": "https://jasonette.github.io/Jasonpedia/webcontainer/index.json"
@@ -132,11 +120,11 @@
             "components": [{
               "type": "label",
               "class": "bold",
-              "text": "Showcase"
+              "text": ""
             }, {
               "type": "label",
               "class": "normal",
-              "text": "Wrote a cool/useful JSON markup? Send a pull request to https://github.com/Jasonette/Jasonpedia"
+              "text": ""
             }]
           },
           "items": [{
