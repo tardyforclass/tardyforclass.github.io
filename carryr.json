@@ -1,22 +1,23 @@
 {
   "$jason": {
     "head": {
+      "title": "Carryr",
       "actions": {
-        "displayBanner": {
-          "type": "$util.banner",
-          "options": {
-            "title": "Clicked",
-            "description": "Link {{$jason.url}} clicked!"
-          }
+        "$foreground": {
+          "type": "$reload"
         }
       }
     },
     "body": {
+      "header": {
+        "title": "Carryr"
+
+      },
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
-          "trigger": "displayBanner"
+          "type": "$default"
         }
       }
     }
