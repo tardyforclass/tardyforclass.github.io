@@ -8,18 +8,106 @@
         }
       }
     },
-    "body": {
-      "header": {
-        "title": "Carryr"
+    "header" : {
+      "title": {
+      "type": "image",
+      "url": "https://docs.google.com/drawings/d/e/2PACX-1vQ5OOTYNUqtY098e7H4tTm49TlaPqJ_ycXqqIrH6ZXh6fKqLR4JjtrRg7Qng5GiLIcmT1LLXdow9VuR/pub?w=960&amp;h=720"
 
-      },
-      "background": {
-        "type": "html",
-        "url": "https://vkprakash.github.io/carryr/index.html",
-        "action": {
-          "type": "$default"
-        }
       }
+
+    },
+    "body": {
+      "style": {
+        "background": "#ffffff",
+        "border": "none"
+      },
+      "meta": {
+        "name": "apple-mobile-web-app-capable",
+        "content": "yes"
+      },
+      "sections": [
+        {
+          "items": [
+            {
+              "type": "vertical",
+              "style": {
+                "padding": "30",
+                "spacing": "20",
+                "align": "center"
+              },
+              "components": [
+                {
+                  "type": "label",
+                  "text": "",
+                  "style": {
+                    "align": "center",
+                    "font": "Courier-Bold",
+                    "size": "18",
+                    "color": "#00ccff"
+                  }
+                },
+                {
+                  "type": "label",
+                  "text": "",
+                  "style": {
+                    "align": "center",
+                    "font": "Courier",
+                    "padding": "30",
+                    "size": "14"
+                  }
+                },
+                {
+                  "type": "label",
+                  "text": "Carryr",
+                  "style": {
+                    "align": "center",
+                    "font": "HelveticaNeue-Bold",
+                    "size": "50",
+                    "color": "#ff3333"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "right",
+                "padding": "10",
+                "color": "#000000",
+                "font": "HelveticaNeue",
+                "size": "12"
+              },
+              
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "center",
+                "padding": "10",
+                "color": "#00ccff",
+                "font": "HelveticaNeue",
+                "size": "25"
+              },
+              "text": "Click Me To Get Started",
+              "href": {
+                "url": "http://vkprakash.github.io/carryr/",
+               "transition": "fullscreen",
+               
+              }
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "right",
+                "padding": "10",
+                "color": "#000000",
+                "font": "HelveticaNeue",
+                "size": "30"
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }
