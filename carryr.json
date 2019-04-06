@@ -80,12 +80,11 @@
                 "font": "HelveticaNeue",
                 "size": "25"
               },
-              "text": "Clickk Me To Get Started",
-              "href": {
-                "url": "http://vkprakash.github.io/carryr/"
-                
-                
-              }
+            "type": "label",
+            "text": "Clickk Me To Get Started",
+            "href": {
+              "url": "https://vkprakash.github.io/carryr/index.html"
+            }
             },
             {
               "type": "label",
