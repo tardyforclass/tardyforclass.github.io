@@ -83,7 +83,7 @@
             "type": "label",
             "text": "Click Me To Get Started",
             "href": {
-              "url": "https://vkprakash.github.io/carryr/index.html"
+              "url": "https://vkprakash.github.io/carryr/index.html",
               "view": "web"
             }
             },
