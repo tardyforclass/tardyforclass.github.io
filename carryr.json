@@ -18,7 +18,13 @@
         "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
           "type": "$default"
-        }
+        },
+          "type": "label",
+            "text": "Click If You Have Logged In Before",
+            "href": {
+              "url": "https://raw.githubusercontent.com/vkprakash/carryr/master/carryr_home.json",
+              
+            }
       }
     }
   }
