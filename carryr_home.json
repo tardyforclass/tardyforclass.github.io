@@ -15,7 +15,7 @@
       },
       "background": {
         "type": "html",
-        "url": "https://vkprakash.github.io/carryr/index.html",
+        "url": "https://vkprakash.github.io/carryr/reload.html",
         "action": {
           "type": "$default"
         }
