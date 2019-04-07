@@ -25,6 +25,12 @@
     },
     "body": {
       "background": {
+        "type": "Label",
+        "text": "Back",
+        "action": {
+          "type": "$back"
+
+        },
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
