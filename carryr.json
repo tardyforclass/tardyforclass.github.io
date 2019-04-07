@@ -24,13 +24,15 @@
       }
     },
     "body": {
-      "background": {
-        "type": "Label",
-        "text": "Back",
+       "header": {
+        "type": "label",
+        "text": "back",
         "action": {
           "type": "$back"
+        }
 
-        },
+      },
+      "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
