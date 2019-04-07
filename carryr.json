@@ -1,105 +1,36 @@
 {
   "$jason": {
     "head": {
-      "title": "Carryr",
+      "title": "Jasonbase",
       "actions": {
-        "$foreground": {
-          "type": "$reload"
-        }
-      }
-    },
-    "footer": {
-      "text": "Owned By Carryr LLC"
-
-    },
-    "body": {
-      "style": {
-        "background": "#ffffff",
-        "border": "none"
-      },
-      "sections": [
-        {
-          "items": [
-            {
-              "type": "vertical",
-              "style": {
-                "padding": "30",
-                "spacing": "20",
-                "align": "center"
-              },
-              "components": [
-                {
-                  "type": "label",
-                  "text": "",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier-Bold",
-                    "size": "18",
-                    "color": "#00ccff"
-                  }
-                },
-                {
-                  "type": "label",
-                  "text": "",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier",
-                    "padding": "30",
-                    "size": "14"
-                  }
-                },
-                {
-                  "type": "label",
-                  "text": "Carryr",
-                  "style": {
-                    "align": "center",
-                    "font": "HelveticaNeue-Bold",
-                    "size": "50",
-                    "color": "#ff3333"
-                  }
+        "visit": [
+          {
+            "{{#if /\\/edit/.test($jason.url)}}": {
+              "type": "$href",
+              "options": {
+                "url": "{{$jason.url.replace('/edit', '')}}",
+                "preload": {
+                  "background": "#ffffff"
                 }
-              ]
-            },
-            {
-              "type": "label",
-              "style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "12"
-              },
-              
-            },
-            {
-              "type": "label",
-              "style": {
-                "align": "center",
-                "padding": "10",
-                "color": "#00ccff",
-                "font": "HelveticaNeue",
-                "size": "25"
-              },
-            "type": "label",
-            "text": "Click Me To Get Started",
-            "href": {
-              "url": "https://vkprakash.github.io/carryr/index.html",
-              "view": "web"
-            }
-            },
-            {
-              "type": "label",
-              "style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "30"
               }
             }
-          ]
+          },
+          {
+            "{{#else}}": {
+              "type": "$default"
+            }
+          }
+        ]
+      }
+    },
+    "body": {
+      "background": {
+        "type": "html",
+        "url": "https://vkprakash.github.io/carryr/index.html",
+        "action": {
+          "trigger": "visit"
         }
-      ]
+      }
     }
   }
 }
