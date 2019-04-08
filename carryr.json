@@ -24,6 +24,8 @@
       }
     },
     "body": {
+      "components": [
+      
       "type": "button",
   "text": "Tap Me!",
   "style": {
@@ -35,8 +37,9 @@
     "corner_radius": "25"
   },
   "action": {
-    "trigger": "reload"
-  },
+    "trigger": "$back"
+  }
+    ],
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
