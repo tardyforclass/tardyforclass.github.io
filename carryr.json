@@ -10,7 +10,7 @@
               "options": {
                 "url": "{{$jason.url.replace('/edit', '')}}",
                 "preload": {
-                  "background": "#ffffff"
+                  "background": "#ffffff",
                     "type": "button",
   "text": "Tap Me!",
   "style": {
