@@ -24,15 +24,9 @@
       }
     },
     "body": {
-      "type": "button",
-  "text": "Tap Me!",
-  
-  "action": {
-    "trigger": "$back"
-  },
       "background": {
         "type": "html",
-        "url": "https://www.jasonbase.com",
+        "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
           "trigger": "visit"
         }
