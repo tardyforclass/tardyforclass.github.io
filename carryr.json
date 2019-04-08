@@ -29,15 +29,7 @@
 
       
       "background": {
-      "components": [
-        "type": "button",
-        "text": "Back",
-        "style": {
-        "color": "#ff0000",
-                "background": "#000000"
-         
-        }
-      ],
+      
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
