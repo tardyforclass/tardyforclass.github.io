@@ -24,22 +24,9 @@
       }
     },
     "body": {
-      "components": [
+
+
       
-      "type": "button",
-  "text": "Tap Me!",
-  "style": {
-    "width": "50",
-    "height": "50",
-   
-    "font": "HelveticaNeue",
-    "size": "12",
-    "corner_radius": "25"
-  },
-  "action": {
-    "trigger": "$back"
-  }
-    ],
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
