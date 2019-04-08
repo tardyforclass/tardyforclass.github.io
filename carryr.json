@@ -11,20 +11,7 @@
                 "url": "{{$jason.url.replace('/edit', '')}}",
                 "preload": {
                   "background": "#ffffff"
-                }
-              }
-            }
-          },
-          {
-            "{{#else}}": {
-              "type": "$default"
-            }
-          }
-        ]
-      }
-    },
-    "body": {
-        "type": "button",
+                    "type": "button",
   "text": "Tap Me!",
   "style": {
     "width": "50",
@@ -38,8 +25,21 @@
   "action": {
     "trigger": "$back"
   }
-       
-
+                }
+              }
+            }
+          },
+          {
+            "{{#else}}": {
+              "type": "$default"
+            }
+          }
+        ]
+      }
+    },
+    "components":
+    "body": {
+        
 
       
       "background": {
