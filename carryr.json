@@ -25,7 +25,7 @@
     },
     "body": {
        "layers": [{
-        "type": "button",
+        "type": "label",
         "text": "👈",
         "style": {
           "top": "10",
