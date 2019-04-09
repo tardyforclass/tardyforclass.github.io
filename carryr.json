@@ -23,15 +23,18 @@
         ]
       }
     },
-
-    "body": {
-
+    "head": {
       "type": "button",
       "text": "back",
       "actions": {
         "trigger": "$back"
 
-      },
+      }
+    },
+
+    "body": {
+
+      
 
       "background": {
         "type": "html",
