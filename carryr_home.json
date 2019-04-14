@@ -21,10 +21,11 @@
         },
         
         
-  "items": [{
-    "type": "horizontal",
+ 
+   "items": [{
+    "type": "vertical",
     "components": [
-      {
+     {
   "type": "button",
   "text": "Tap Me!",
   "style": {
@@ -37,7 +38,7 @@
     "corner_radius": "25"
   },
   "action": {
-    "trigger": "$back"
+    "trigger": "reload"
   }
 }
     ]
