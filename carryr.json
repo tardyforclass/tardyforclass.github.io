@@ -45,7 +45,7 @@
          "items": [{
     "type": "vertical",
     "components": [
-     {
+      {
   "type": "button",
   "text": "Tap Me!",
   "style": {
@@ -61,6 +61,7 @@
     "trigger": "reload"
   }
 }
+     
     ]
   }]
       }
