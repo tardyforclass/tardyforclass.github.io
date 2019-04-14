@@ -23,14 +23,7 @@
         ]
       }
     },
-    "head": {
-      "type": "button",
-      "text": "back",
-      "actions": {
-        "trigger": "$back"
-
-      }
-    },
+    
     "footer": {
          "items": [{
     "type": "vertical",
