@@ -18,7 +18,26 @@
         "url": "https://vkprakash.github.io/carryr/reload.html",
         "action": {
           "type": "$default"
-        }
+        },
+         "items": [
+                {
+                  "type": "horizontal",
+                  "components": [{
+                    "type": "textfield",
+                    "name": "blank"
+                  }, {
+                    "type": "button",
+                    "text": "Done",
+                    "style": {
+                      "width": "60",
+                      "color": "#ff0000"
+                    },
+                    "action": {
+                      "type": "$render"
+                    }
+                  }]
+                }
+              ]
       }
     }
   }
