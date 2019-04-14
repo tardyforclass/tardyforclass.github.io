@@ -19,22 +19,23 @@
         "action": {
           "type": "$default"
         },
-         {
-  "type": "button",
-  "text": "Tap Me!",
-  "style": {
-    "width": "50",
-    "height": "50",
-    "background": "#00ff00",
-    "color": "#ffffff",
-    "font": "HelveticaNeue",
-    "size": "12",
-    "corner_radius": "25"
-  },
-  "action": {
-    "trigger": "reload"
-  }
+        
+        {
+  "items": [{
+    "type": "horizontal",
+    "components": [
+      {
+        "type": "image",
+        "url": "http://i.giphy.com/LXONhtCmN32YU.gif"
+      }, 
+      {
+        "type": "label",
+        "text": "Rick"
+      }
+    ]
+  }]
 }
+        
       }
     }
   }
