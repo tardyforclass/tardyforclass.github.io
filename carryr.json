@@ -42,6 +42,7 @@
         "action": {
           "trigger": "visit"
         },
+        "footer" {
          "items": [{
     "type": "vertical",
     "components": [
@@ -64,6 +65,7 @@
      
     ]
   }]
+}
       }
     }
   }
