@@ -24,7 +24,10 @@
       }
     },
     
-    "footer": {
+    
+
+    "body": {
+       "footer": {
          "items": [{
     "type": "vertical",
     "components": [
@@ -48,8 +51,6 @@
     ]
   }]
 },
-
-    "body": {
 
       
 
