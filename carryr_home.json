@@ -20,7 +20,7 @@
           "type": "$default"
         },
         
-        {
+        
   "items": [{
     "type": "horizontal",
     "components": [
@@ -34,7 +34,7 @@
       }
     ]
   }]
-}
+
         
       }
     }
