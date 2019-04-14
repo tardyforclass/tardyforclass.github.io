@@ -31,7 +31,7 @@
 
       }
     },
-    "footer" {
+    "footer": {
          "items": [{
     "type": "vertical",
     "components": [
