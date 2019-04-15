@@ -24,7 +24,7 @@
       }
     },
     "body": {
-     "sections": [
+       "sections": [
         {
           "items": [
             {
@@ -36,26 +36,18 @@
               },
               "components": [
                 {
-  "type": "button",
-  "text": "Tap Me!",
-  "style": {
-    "width": "50",
-    "height": "50",
-    "background": "#00ff00",
-    "color": "#ffffff",
-    "font": "HelveticaNeue",
-    "size": "12",
-    "corner_radius": "25"
-  },
-  "action": {
-    "trigger": "reload"
-  }
-},
-                             
+                  "type": "label",
+                  "text": "It's ALIVE!",
+                  "style": {
+                    "align": "center",
+                    "font": "Courier-Bold",
+                    "size": "18"
+                  }
+                },
                 {
                   "type": "label",
-                  "text": " t",
-                 "style": {
+                  "text": "This is a demo app. You can make your own app by changing the url inside settings.plist",
+                  "style": {
                     "align": "center",
                     "font": "Courier",
                     "padding": "30",
@@ -63,8 +55,8 @@
                   }
                 },
                 {
-                 "type": "label",
-                  "text": "",
+                  "type": "label",
+                  "text": "{ ˃̵̑ᴥ˂̵̑}",
                   "style": {
                     "align": "center",
                     "font": "HelveticaNeue-Bold",
@@ -82,7 +74,7 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "",
+              "text": "Check out Live DEMO",
               "href": {
                 "url": "https://jasonette.github.io/Jasonpedia/demo.json",
                 "fresh": "true"
@@ -97,8 +89,8 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "",
-             "href": {
+              "text": "Watch the tutorial video",
+              "href": {
                 "url": "https://www.youtube.com/watch?v=hfevBAAfCMQ",
                 "view": "Web"
               }
@@ -112,13 +104,15 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              "text": "",
-             "href": {
+              "text": "View documentation",
+              "href": {
                 "url": "https://jasonette.github.io/documentation",
                 "view": "Web"
               }
             }
-          ],
+          ]
+        }
+      ]
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
