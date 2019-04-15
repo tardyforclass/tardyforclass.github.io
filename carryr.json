@@ -23,41 +23,16 @@
         ]
       }
     },
+	 
     "body": {
-      "sections": [
-	{
-		"items": [
-			{
-				"type": "vertical",
-				"style": {
-					"padding": "30",
-					"spacing": "20",
-					"align": "center"
-
-				},
-				"components": [
-					{
-  "type": "button",
-  "text": "Tap Me!",
-  "style": {
-    "width": "50",
-    "height": "50",
-    "background": "#00ff00",
-    "color": "#ffffff",
-    "font": "HelveticaNeue",
-    "size": "12",
-    "corner_radius": "25"
-  },
-  "action": {
-    "trigger": "reload"
-  }
-}
-
-				]
-			}
-		]
-	}
-],
+	    "header": {
+        "title": "Carryr",
+        "style": {
+          "background": "#8bb92d",
+          "color": "#ffffff",
+          "font": "AvenirNext-Bold",
+          "size": "14"
+        },
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
