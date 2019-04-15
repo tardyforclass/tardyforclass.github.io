@@ -53,9 +53,9 @@
 },
                              
                 {
-                  //"type": "label",
-                  "text": "This is a demo app. You can make your own app by changing the url inside settings.plist",
-                 //"style": {
+                  "type": "label",
+                  "text": " t",
+                 "style": {
                     "align": "center",
                     "font": "Courier",
                     "padding": "30",
@@ -63,9 +63,9 @@
                   }
                 },
                 {
-                 //"type": "label",
-                  //"text": "{ ˃̵̑ᴥ˂̵̑}",
-                  //"style": {
+                 "type": "label",
+                  "text": "",
+                  "style": {
                     "align": "center",
                     "font": "HelveticaNeue-Bold",
                     "size": "50"
@@ -74,22 +74,7 @@
               ]
             },
             {
-              //"type": "label",
-              //"style": {
-                "align": "right",
-                "padding": "10",
-                "color": "#000000",
-                "font": "HelveticaNeue",
-                "size": "12"
-              },
-             // "text": "Check out Live DEMO",
-              "href": {
-                //"url": "https://jasonette.github.io/Jasonpedia/demo.json",
-                //"fresh": "true"
-              }
-            },
-            {
-             // "type": "label",
+              "type": "label",
               "style": {
                 "align": "right",
                 "padding": "10",
@@ -97,25 +82,40 @@
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-              //"text": "Watch the tutorial video",
-              //"href": {
-                //"url": "https://www.youtube.com/watch?v=hfevBAAfCMQ",
-                //"view": "Web"
+              "text": "",
+              "href": {
+                "url": "https://jasonette.github.io/Jasonpedia/demo.json",
+                "fresh": "true"
               }
             },
             {
-              //"type": "label",
-              //"style": {
+              "type": "label",
+              "style": {
                 "align": "right",
                 "padding": "10",
                 "color": "#000000",
                 "font": "HelveticaNeue",
                 "size": "12"
               },
-             // "text": "View documentation",
-             // "href": {
-               // "url": "https://jasonette.github.io/documentation",
-                //"view": "Web"
+              "text": "",
+             "href": {
+                "url": "https://www.youtube.com/watch?v=hfevBAAfCMQ",
+                "view": "Web"
+              }
+            },
+            {
+              "type": "label",
+              "style": {
+                "align": "right",
+                "padding": "10",
+                "color": "#000000",
+                "font": "HelveticaNeue",
+                "size": "12"
+              },
+              "text": "",
+             "href": {
+                "url": "https://jasonette.github.io/documentation",
+                "view": "Web"
               }
             }
           ]
