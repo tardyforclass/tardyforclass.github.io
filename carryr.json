@@ -26,25 +26,19 @@
     "body": {
 	    "header": {
 	"menu": {
-		"text": "tap me",
-		"style": {
-			"color": "#0000ff",
-			"font": "HelveticaNeue-Bold",
-			"size": "17"
-
-		},
-		"action": {
-			"type": "$back",
-
-		},
-		"badge": {
-			"text": "3",
-			"style": {
-				"background": "#ff0000",
-				"color": "#ffffff"
-			}
-		}
-	}
+		
+  "items": [{
+    "type": "vertical",
+    "components": [{
+      "type": "button",
+      "url": "https://i0.wp.com/www.matuloo.com/wp-content/uploads/2017/02/backbutton.png?fit=800%2C400",
+      "action": {
+	      "type: "$back"
+      } 
+    }]
+  }]
+}
+		
 },
       
      
