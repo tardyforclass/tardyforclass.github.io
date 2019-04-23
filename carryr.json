@@ -24,26 +24,31 @@
       }
     },
     "body": {
-      
-      "header": {
+	    "header": {
 	"menu": {
-		{
-  "type": "button",
-  "text": "Tap Me!",
-  "style": {
-    "width": "50",
-    "height": "50",
-    "background": "#00ff00",
-    "color": "#ffffff",
-    "font": "HelveticaNeue",
-    "size": "12",
-    "corner_radius": "25"
-  },
-  "action": {
-    "trigger": "$back"
-  }
+		"text": "tap me",
+		"style": {
+			"color": "#0000ff",
+			"font": "HelveticaNeue-Bold",
+			"size": "17"
+
+		},
+		"action": {
+			"type": "$back",
+
+		},
+		"badge": {
+			"text": "3",
+			"style": {
+				"background": "#ff0000",
+				"color": "#ffffff"
+			}
+		}
+	}
 }
-},
+      
+     
+	
       
       
       "background": {
