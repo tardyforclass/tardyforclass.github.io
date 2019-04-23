@@ -36,8 +36,8 @@
         "action": {
           "type": "$back"
         }
-      }]
-      },
+      }],
+      
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
