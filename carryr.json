@@ -24,8 +24,7 @@
       }
     },
     "body": {
-	    "header": {
-	"menu": {
+	    
 		
   "items": [{
     "type": "vertical",
@@ -37,9 +36,9 @@
       } 
     }]
   }]
-}
+
 		
-},
+
       
      
 	
