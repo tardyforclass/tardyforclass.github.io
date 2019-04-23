@@ -27,18 +27,17 @@
       
       "header": {
 	"menu": {
-		{
+		
   "items": [{
     "type": "vertical",
     "components": [{
       "type": "button",
       "url": "https://image.flaticon.com/icons/png/512/93/93634.png",
-      "action": {
-		"type": "$back"
-	} 
+      "action": { 
+	      "type": "$back"
+      } 
     }]
   }]
-}
 	}
 },
       
