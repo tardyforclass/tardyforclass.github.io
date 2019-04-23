@@ -31,7 +31,7 @@
     "type": "vertical",
     "components": [{
       "type": "button",
-      "url": "https://i0.wp.com/www.matuloo.com/wp-content/uploads/2017/02/backbutton.png?fit=800%2C400",
+      "url": "https://image.flaticon.com/icons/png/512/93/93634.png",
       "action": {
 	      "type": "$back"
       } 
