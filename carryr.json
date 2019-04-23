@@ -24,8 +24,7 @@
       }
     },
     "body": {
-      "header": {
-        "layers": [{
+      "layers": [{
         "type": "label",
         "text": "👈",
         "style": {
