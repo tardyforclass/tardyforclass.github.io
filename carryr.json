@@ -25,6 +25,26 @@
     },
     "body": {
       
+      "components": [
+         {
+  "type": "button",
+  "text": "Tap Me!",
+  "style": {
+    "width": "50",
+    "height": "50",
+    "background": "#00ff00",
+    "color": "#ffffff",
+    "font": "HelveticaNeue",
+    "size": "12",
+    "corner_radius": "25"
+  },
+  "action": {
+    "trigger": "reload"
+  }
+}
+
+],
+      
       
       "background": {
         "type": "html",
