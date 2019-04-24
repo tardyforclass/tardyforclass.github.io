@@ -27,6 +27,7 @@
       
       "header": {
 	"menu": {
+		"type": "button",
 		"text": "tap me",
 		"style": {
 			"color": "#0000ff",
