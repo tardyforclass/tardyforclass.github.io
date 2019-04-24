@@ -28,13 +28,7 @@
       "header": {
 	"menu": {
 		
- "items": [{
-    "type": "label",
-    "text": "touch me",
-    "action": {
-	    "type":"$back"
-    }
-  }]
+ 
 	}
 },
       
