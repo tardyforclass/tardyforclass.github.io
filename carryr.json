@@ -25,30 +25,18 @@
     },
     "body": {
       
-      "header": {
-	"menu": {
-		"type": "button",
-		"text": "tap me",
-		"style": {
-			"color": "#0000ff",
-			"font": "HelveticaNeue-Bold",
-			"size": "17"
-
-		},
-		"action": {
-			"type": "$back",
-
-		},
-		"badge": {
-			"text": "1",
-			"style": {
-				"background": "#ff0000",
-				"color": "#ffffff"
-			}
-		}
-	}
+      {
+  "items": [{
+    "type": "vertical",
+    "components": [{
+      "type": "button",
+      "url": "https://cdn6.aptoide.com/imgs/f/b/8/fb8d3db2174b18850fadf9c882ee0682_icon.png?w=240",
+      "action": {
+	    "type": "$back"
+    }
+    }]
+  }]
 },
-      
       
       "background": {
         "type": "html",
