@@ -25,7 +25,7 @@
     },
     "body": {
       
-      {
+      
   "items": [{
     "type": "vertical",
     "components": [{
@@ -35,8 +35,8 @@
 	    "type": "$back"
     }
     }]
-  }]
-},
+  }],
+
       
       "background": {
         "type": "html",
