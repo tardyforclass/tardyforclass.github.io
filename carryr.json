@@ -26,7 +26,9 @@
     "body": {
       
       
-  "items": [{
+ "head": {
+	 "menu": {
+		  "items": [{
     "type": "vertical",
     "components": [{
       "type": "button",
@@ -35,7 +37,9 @@
 	    "type": "$back"
     }
     }]
-  }],
+  }]
+	 }
+ },
 
       
       "background": {
