@@ -24,28 +24,6 @@
       }
     },
     "body": {
-      
-      
- "header": {
-	 "menu": {
-		 "layers": [{
-        "type": "label",
-        "text": "👈",
-        "style": {
-          "top": "10",
-          "right": "10",
-          "width": "100",
-          "height": "100"
-        },
-        "action": {
-          "type": "$back"
-        }
-      }]
-		
-	 }
- },
-
-      
       "background": {
         "type": "html",
         "url": "https://vkprakash.github.io/carryr/index.html",
