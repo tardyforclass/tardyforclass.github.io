@@ -28,16 +28,19 @@
       
  "header": {
 	 "menu": {
-		  "items": [{
-    "type": "vertical",
-    "components": [{
-      "type": "button",
-      "url": "https://cdn6.aptoide.com/imgs/f/b/8/fb8d3db2174b18850fadf9c882ee0682_icon.png?w=240",
-      "action": {
-	    "type": "$back"
-    }
-    }]
-  }]
+		  "layers": [{
+        "type": "label",
+        "text": "👈",
+        "style": {
+          "top": "10",
+          "right": "10",
+          "width": "100",
+          "height": "100"
+        },
+        "action": {
+          "type": "$back"
+        }
+      }]
 	 }
  },
 
