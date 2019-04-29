@@ -25,16 +25,20 @@
     },
     "body": {
       
-           "items": [{
+           "header": {
+             "menu": {
+               "items": [{
     "type": "vertical",
     "components": [{
       "type": "button",
-      "text": "Back"
+      "text": "Back",
       "action": {
         "type": "$back"
       
     }]
-  }],
+  }]
+             }
+           },
        
       "background": {
         "type": "html",
