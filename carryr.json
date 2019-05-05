@@ -24,26 +24,9 @@
       }
     },
     "body": {
-      
-           "header": {
-	"menu": {
-
-              "items": [{
-    "type": "vertical",
-    "components": [{
-      "type": "button",
-      "url": "https://.....",
-      "action": { 
-      	"type": "$back"
-       } 
-    }]
-  }]
-	}
-},
-       
       "background": {
         "type": "html",
-        "url": "https://vkprakash.github.io/carryr/index.html",
+        "url": "https://www.jasonbase.com",
         "action": {
           "trigger": "visit"
         }
