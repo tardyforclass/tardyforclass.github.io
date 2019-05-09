@@ -32,8 +32,8 @@
         "style": {
           "color": "#44D457",
          
-          "font": "AvenirNext-Bold",
-          "size": "14"
+          "font": "Times New Roman-Bold",
+          "size": "17"
         },
           "href": {
             "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
