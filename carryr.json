@@ -26,15 +26,15 @@
     "body": {
       "header": {
 	"menu": {
-		"text": "tap me",
+		"text": "Pay With Card",
 		"style": {
             "color": "#0000ff",
             "font": "HelveticaNeue-Bold",
             "size": "17"
           },
-          "action": {
-            "type": "$back",
-            
+          "href": {
+            "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
+            "view": "web"
           },
           "badge": {
             "text": "4",
