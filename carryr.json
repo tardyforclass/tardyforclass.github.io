@@ -24,31 +24,9 @@
       }
     },
     "body": {
-       "header": {
-       
-        "menu": {
-          "text": "Click To Pay With Card",
-          
-       "style": {
-            "color": "#0000ff",
-            "font": "HelveticaNeue-Bold",
-            "size": "17"
-          },
-          "href": {
-            "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
-            "view": "web"
-          },
-         "badge": {
-            "text": "3",
-            "style": {
-              "background": "#ff0000",
-              "color": "#ffffff"
-            }
-        }
-      },
       "background": {
         "type": "html",
-        "url": "http://vkprakash.github.io/carryr/",
+        "url": "https://vkprakash.github.io/carryr/index.html",
         "action": {
           "trigger": "visit"
         }
