@@ -25,17 +25,17 @@
     },
     "body": {
        "header": {
-        "title": "Jasonpedia",
+        "title": "Carryr",
         "style": {
-          "background": "#8bb92d",
+          "background": "#44D457",
           "color": "#ffffff",
           "font": "AvenirNext-Bold",
           "size": "14"
         },
         "menu": {
-          "text": "View JSON",
+          "text": "Click To Pay With Card",
           "href": {
-            "url": "https://github.com/Jasonette/Jasonpedia/blob/gh-pages/demo.json",
+            "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
             "view": "web"
           }
         }
