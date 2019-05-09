@@ -1,4 +1,30 @@
-"header": {
+{
+  "$jason": {
+    "head": {
+      "title": "Jasonbase",
+      "actions": {
+        "visit": [
+          {
+            "{{#if /\\/edit/.test($jason.url)}}": {
+              "type": "$href",
+              "options": {
+                "url": "{{$jason.url.replace('/edit', '')}}",
+                "preload": {
+                  "background": "#ffffff"
+                }
+              }
+            }
+          },
+          {
+            "{{#else}}": {
+              "type": "$default"
+            }
+          }
+        ]
+      }
+    },
+    "body": {
+	    "header": {
 	"menu": {
 		"text": "Pay WIth Card",
 		 "href": {
@@ -17,4 +43,14 @@
               "color": "#ffffff"
             }
 	}
+},
+      "background": {
+        "type": "html",
+        "url": "http://vkprakash.github.io/carryr/",
+        "action": {
+          "trigger": "visit"
+        }
+      }
+    }
+  }
 }
