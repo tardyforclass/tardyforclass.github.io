@@ -24,34 +24,26 @@
       }
     },
     "body": {
-      "header": {
-	"menu": {
-		"text": "Pay With Card",
-		"style": {
-            "color": "#0000ff",
-            "font": "HelveticaNeue-Bold",
-            "size": "17"
-          },
+       "header": {
+       
+        "menu": {
+          "text": "Pay With Card",
+          
+        "style": {
+          "color": "#44D457",
+         
+          "font": "AvenirNext-Bold",
+          "size": "14"
+        },
           "href": {
             "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
             "view": "web"
-          },
-          "badge": {
-            "text": "4",
-            "style": {
-              "background": "#ff0000",
-              "color": "#ffffff"
-            }
           }
- 
-	}
-},
-	    "footer":{
-		    "text":"test"
-	    },
+        }
+      },
       "background": {
         "type": "html",
-        "url": "https://vkprakash.github.io/carryr/index.html",
+        "url": "http://vkprakash.github.io/carryr/",
         "action": {
           "trigger": "visit"
         }
