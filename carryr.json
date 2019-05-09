@@ -24,18 +24,9 @@
       }
     },
     "body": {
-      "header":{
-        "type": "label",
-  "text": "Open a browser",
-  "href": {
-    "url": "https://www.twitter.com/gliechtenstein",
-    "view": "web"
-  }
-}
-},
       "background": {
         "type": "html",
-        "url": "https://www.jasonbase.com",
+        "url": "http://vkprakash.github.io/carryr/",
         "action": {
           "trigger": "visit"
         }
