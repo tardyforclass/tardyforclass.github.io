@@ -25,15 +25,16 @@
     },
     "body": {
        "header": {
-        "title": "Carryr",
+       
+        "menu": {
+          "text": "Click To Pay With Card",
+          
         "style": {
-          "background": "#44D457",
-          "color": "#ffffff",
+          "color": "#44D457",
+         
           "font": "AvenirNext-Bold",
           "size": "14"
         },
-        "menu": {
-          "text": "Click To Pay With Card",
           "href": {
             "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
             "view": "web"
