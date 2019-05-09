@@ -26,20 +26,18 @@
     "body": {
       "header": {
         "menu": {
-          {
-  "type": "label",
-  "text": "Click To Pay With Card",
+          "type": "label",
+  "text": "Open a browser",
   "href": {
-    "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
+    "url": "https://www.twitter.com/gliechtenstein",
     "view": "web"
   }
 }
-
         }
       },
       "background": {
         "type": "html",
-        "url": "http://vkprakash.github.io/carryr/home.html",
+        "url": "https://www.jasonbase.com",
         "action": {
           "trigger": "visit"
         }
