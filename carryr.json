@@ -24,26 +24,23 @@
       }
     },
     "body": {
-	    "header": {
-	"menu": {
-		"text": "Pay WIth Card",
-		 "href": {
-    "url": "https://www.twitter.com/gliechtenstein",
-    "view": "web"
-  },
-  "style": {
-            "color": "#0000ff",
-            "font": "HelveticaNeue-Bold",
-            "size": "17"
-          },
-          "badge": {
-            "text": "3",
-            "style": {
-              "background": "#ff0000",
-              "color": "#ffffff"
-            }
-	}
-},
+       "header": {
+       
+        "menu": {
+          "text": "Click To Pay With Card",
+          
+        "style": {
+          "color": "#44D457",
+         
+          "font": "AvenirNext-Bold",
+          "size": "14"
+        },
+          "href": {
+            "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
+            "view": "web"
+          }
+        }
+      },
       "background": {
         "type": "html",
         "url": "http://vkprakash.github.io/carryr/",
