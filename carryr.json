@@ -24,6 +24,19 @@
       }
     },
     "body": {
+      "header": {
+        "menu": {
+          {
+  "type": "label",
+  "text": "Click To Pay With Card",
+  "href": {
+    "url": "https://pay.google.com/payments/u/0/home#sendRequestMoney",
+    "view": "web"
+  }
+}
+
+        }
+      }
       "background": {
         "type": "html",
         "url": "http://vkprakash.github.io/carryr/home.html",
