@@ -139,11 +139,16 @@
 }
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #F60FFE;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #F60FFE;
 }
 
 .dropdown {
@@ -156,6 +161,7 @@
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
+  overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -167,11 +173,10 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.show {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
         
@@ -328,33 +333,39 @@ geoFire.set("User", [lat, lng] ).then(()=>{
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2nPlSt_nM7PSKD8So8anbUbBYICFWcCA&callback=initMap">
     </script>
     <center><button id="MyButton" class="btn btn-warning" style="float: right;" >Load</button></center>
+
      <center><input type="button" class="myButton" style="float: left;" value="Home" onclick="window.location.href='https://vkprakash.github.io/carryr/reload.html'" /> </center>
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-  <div class="w3-container">
- 
-  <div class="w3-dropdown-click">
-    <center><button onclick="myFunction()" class="w3-button w3-black">What To Do If A Button Says Undefined</button></center>
-    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-      <p>If you click on a marker and a phone number is not displayed or it's undefined, then click the Load button. If it still doesn't show up, that means another user is currently using that marker</p>
-    </div>
+  
+    
+<div class="dropdown">
+  <center><button onclick="myFunction()" class="dropbtn">Dropdown</button></center>
+  <div id="myDropdown" class="dropdown-content">
+   <p>If you click on a marker and a phone number is not displayed or it's undefined, then click the Load button. If it still doesn't show up, that means another user is currently using that marker</p>
   </div>
 </div>
 
 <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
 function myFunction() {
-  var x = document.getElementById("Demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }
 </script>
-    
-
 
    
 <!-- <center><input type="button" class="pay" style="float: center;" value="Pay With Card" onclick="window.location.href='https://pay.google.com/payments/u/0/home#sendRequestMoney'" /> </center> -->
