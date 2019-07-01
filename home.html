@@ -10,7 +10,6 @@
 	    body {
         background-color: #010001
       }
-
      
       
       
@@ -143,7 +142,6 @@
 	position:relative;
 	top:1px;
 }
-
 .dropbtn {
   background-color: #F60FFE;
   color: white;
@@ -152,16 +150,13 @@
   border: none;
   cursor: pointer;
 }
-
 .dropbtn:hover, .dropbtn:focus {
   background-color: #F60FFE;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -171,18 +166,14 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
 .dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
-
 #container {
   display: flex;
   flex-direction: row;
@@ -193,9 +184,47 @@
   flex: 1;
 }
 
+.dropbtn {
+  -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+  -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff00ae), color-stop(1, #ff00f7));
+  background:-moz-linear-gradient(top, #ff00ae 5%, #ff00f7 100%);
+  background:-webkit-linear-gradient(top, #ff00ae 5%, #ff00f7 100%);
+  background:-o-linear-gradient(top, #ff00ae 5%, #ff00f7 100%);
+  background:-ms-linear-gradient(top, #ff00ae 5%, #ff00f7 100%);
+  background:linear-gradient(to bottom, #ff00ae 5%, #ff00f7 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00ae', endColorstr='#ff00f7',GradientType=0);
+  background-color:#ff00ae;
+  -moz-border-radius:18px;
+  -webkit-border-radius:18px;
+  border-radius:18px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+}
+.dropbtn:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff00f7), color-stop(1, #ff00ae));
+  background:-moz-linear-gradient(top, #ff00f7 5%, #ff00ae 100%);
+  background:-webkit-linear-gradient(top, #ff00f7 5%, #ff00ae 100%);
+  background:-o-linear-gradient(top, #ff00f7 5%, #ff00ae 100%);
+  background:-ms-linear-gradient(top, #ff00f7 5%, #ff00ae 100%);
+  background:linear-gradient(to bottom, #ff00f7 5%, #ff00ae 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00f7', endColorstr='#ff00ae',GradientType=0);
+  background-color:#ff00f7;
+}
+.dropbtn:active {
+  position:relative;
+  top:1px;
+}
+     
 
-
-        
       
       
       /* Always set the map height explicitly to define the size of the div
@@ -308,7 +337,6 @@
                  a.appendChild(linkText);
                  a.title = (data.User.g.number);
                 // a.href = "sms://" +  (data.User.g.number);
-
                   infoWindow.setContent(document.body.appendChild(a));
                   infoWindow.open(map, this);
                 }
@@ -369,7 +397,6 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -402,5 +429,3 @@ window.onclick = function(event) {
 
     
   </body>
- 
-</html>
