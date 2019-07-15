@@ -258,10 +258,32 @@
     </style>
     <!-- Place this inside the H
       TML head; don't use async defer for now -->
+	  
+	  
+	  
+    <script>
+
+      // query current page visibility state: prerender, visible, hidden
+var pageVisibility = document.visibilityState;
+
+// subscribe to visibility change events
+document.addEventListener('visibilitychange', function() {
+  // fires when user switches tabs, apps, goes to homescreen, etc.
+    if (document.visibilityState == 'hidden') { 
+
+     }
+
+    // fires when app transitions from prerender, user returns to the app / tab.
+    if (document.visibilityState == 'visible') { 
+
+    }
+});
+
+</script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<script src="ptr.js"></script>    
+ 
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
