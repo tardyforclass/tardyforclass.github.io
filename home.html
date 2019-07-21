@@ -263,22 +263,19 @@
 	  
     <script>
 
-      // query current page visibility state: prerender, visible, hidden
-var pageVisibility = document.visibilityState;
-
-// subscribe to visibility change events
-document.addEventListener('visibilitychange', function() {
-  // fires when user switches tabs, apps, goes to homescreen, etc.
-    if (document.visibilityState == 'hidden') { 
-
-     }
-
-    // fires when app transitions from prerender, user returns to the app / tab.
-    if (document.visibilityState == 'visible') { 
-
-    }
-});
-
+      function visibilityHandler() {
+  var hash = '#bg';
+  if (document.hidden && !window.location.hash) {
+    window.history.replaceState(null, null, window.location + hash);
+  } else if (!document.hidden && window.location.hash == hash) {
+    var l = '' + window.location;
+    window.history.replaceState(null, null, l.substr(0, l.length - hash.length));
+  }
+};
+document.addEventListener('visibilitychange', visibilityHandler, false);
+visibilityHandler();
+	    
+	    
 </script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
