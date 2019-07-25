@@ -261,22 +261,7 @@
 	  
 	  
 	  
-    <script>
-
-      function visibilityHandler() {
-  var hash = '#bg';
-  if (document.hidden && !window.location.hash) {
-    window.history.replaceState(null, null, window.location + hash);
-  } else if (!document.hidden && window.location.hash == hash) {
-    var l = '' + window.location;
-    window.history.replaceState(null, null, l.substr(0, l.length - hash.length));
-  }
-};
-document.addEventListener('visibilitychange', visibilityHandler, false);
-visibilityHandler();
-	    
-	    
-</script>
+    
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -318,6 +303,15 @@ visibilityHandler();
       // replace var geoFire = new GeoFire(locationsRef.push()); with
       var geoFire = new GeoFire(pushRef); 
       </script>
+	  
+	   <script>
+
+        $(document).ready(function() {
+    // document is loaded and DOM is ready
+     window.location.href = "https://vkprakash.github.io/carryr/home";
+});
+
+</script>
 
 
   </head>
