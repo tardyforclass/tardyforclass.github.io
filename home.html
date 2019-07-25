@@ -13,7 +13,6 @@
 	    body {
    -webkit-user-select: none;
 }
-
 	    body {
    -webkit-tap-highlight-color: transparent;
 }
@@ -261,7 +260,21 @@
 	  
 	  
 	  
-    
+    <script>
+      function visibilityHandler() {
+  var hash = '#bg';
+  if (document.hidden && !window.location.hash) {
+    window.history.replaceState(null, null, window.location + hash);
+  } else if (!document.hidden && window.location.hash == hash) {
+    var l = '' + window.location;
+    window.history.replaceState(null, null, l.substr(0, l.length - hash.length));
+  }
+};
+document.addEventListener('visibilitychange', visibilityHandler, false);
+visibilityHandler();
+	    
+	    
+</script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -303,8 +316,6 @@
       // replace var geoFire = new GeoFire(locationsRef.push()); with
       var geoFire = new GeoFire(pushRef); 
       </script>
-	  
-	  
 
 
   </head>
@@ -451,7 +462,6 @@ window.onclick = function(event) {
 
 
   <style>
-
         
         .myButton2 {
   -moz-box-shadow: 3px 4px 0px 0px #8a2121;
@@ -492,16 +502,12 @@ window.onclick = function(event) {
   position:relative;
   top:1px;
 }
-
         
             
         
-
                 
         
-
         
-
 </style>
 
     
