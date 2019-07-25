@@ -261,17 +261,19 @@
 	  
 	  
     <script>
-      // query current page visibility state: prerender, visible, hidden
-var pageVisibility = document.visibilityState;
-// subscribe to visibility change events
-document.addEventListener('visibilitychange', function() {
-  // fires when user switches tabs, apps, goes to homescreen, etc.
-    if (document.visibilityState == 'hidden') { 
-     }
-    // fires when app transitions from prerender, user returns to the app / tab.
-    if (document.visibilityState == 'visible') { 
-    }
-});
+      function visibilityHandler() {
+  var hash = '#bg';
+  if (document.hidden && !window.location.hash) {
+    window.history.replaceState(null, null, window.location + hash);
+  } else if (!document.hidden && window.location.hash == hash) {
+    var l = '' + window.location;
+    window.history.replaceState(null, null, l.substr(0, l.length - hash.length));
+  }
+};
+document.addEventListener('visibilitychange', visibilityHandler, false);
+visibilityHandler();
+	    
+	    
 </script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -424,6 +426,8 @@ geoFire.set("User", [lat, lng] ).then(()=>{
 </div>
 <center>
 	
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	
 
 <script>
 /* When the user clicks on the button, 
@@ -445,11 +449,15 @@ window.onclick = function(event) {
   }
 }
 </script>
+	
+	
+	
 
    
 <!-- <center><input type="button" class="pay" style="float: center;" value="Pay With Card" onclick="window.location.href='https://pay.google.com/payments/u/0/home#sendRequestMoney'" /> </center> -->
     
-    <center><button onclick="window.location.href = 'https://pay.google.com/payments/u/0/home#sendRequestMoney';" class="pay">Pay With Card</button></center>
+    <center><a href="https://pay.google.com/payments/u/0/home#sendRequestMoney" class="pay">Pay With Card</a>
+</center>
 
 
 
