@@ -10,18 +10,6 @@
 	 
     <meta charset="utf-8">
     <style>
-	    body {
-   -webkit-user-select: none;
-}
-	    body {
-   -webkit-tap-highlight-color: transparent;
-}
-	    
-	    body {
-   -webkit-touch-callout: none;
-}
-	    
-	    
 	    
 	    body {
         background-color: #EDEBEB
@@ -257,28 +245,12 @@
     </style>
     <!-- Place this inside the H
       TML head; don't use async defer for now -->
-	  
-	  
-	  
-    <script>
-      function visibilityHandler() {
-  var hash = '#bg';
-  if (document.hidden && !window.location.hash) {
-    window.history.replaceState(null, null, window.location + hash);
-  } else if (!document.hidden && window.location.hash == hash) {
-    var l = '' + window.location;
-    window.history.replaceState(null, null, l.substr(0, l.length - hash.length));
-  }
-};
-document.addEventListener('visibilitychange', visibilityHandler, false);
-visibilityHandler();
-	    
-	    
-</script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
- 
+
+
+
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
@@ -317,9 +289,70 @@ visibilityHandler();
       var geoFire = new GeoFire(pushRef); 
       </script>
 
+      
+
 
   </head>
   <body>
+
+
+<title>PWA Install Prompt</title>
+        <meta content="text/html;charset=utf-8" http-equiv="content-type" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <style type="text/css">
+            /* just for the demo */
+            
+            .demo { margin: 0 auto; max-width: 500px; text-align: center; }
+            .demo p { color: #FFFFFF; font-family: sans-serif; line-height: 1.25em; }
+            .demo p a { color: inherit; text-decoration: underline; }
+            .demo button { background: #FFFFFF; border: 0; border-radius: 2px; color: #17AAEC; cursor: pointer; font-size: 14px; font-weight: 700; padding: 9.5px 26px; text-transform: uppercase; }
+        </style>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="demo">
+            
+            <button onclick="prompt.open();">Show Prompt</button>
+            
+        </div>
+        <div class="pwa-install-prompt__container">
+            <button class="pwa-install-prompt__overlay">Close</button>
+            <div class="pwa-install-prompt">
+                <div class="pwa-install-prompt__icon__container">
+                    <img class="pwa-install-prompt__icon" src="https://raw.githubusercontent.com/vkprakash/carryr/master/Carryr_Logo_Final_1_1024x1024.png" alt="Rocket" />
+                </div>
+                <div class="pwa-install-prompt__content">
+                    <h3 class="pwa-install-prompt__title">Install Rocket</h3>
+                    <p class="pwa-install-prompt__text">Install this application on your home screen for quick and easy access when you’re on the go.</p>
+                    <p class="pwa-install-prompt__guide">Just tap <svg class="pwa-install-prompt__guide__icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Share</title><path fill="#007AFF" d="M48.883,22.992L61.146,10.677L61.146,78.282C61.146,80.005 62.285,81.149 64,81.149C65.715,81.149 66.854,80.005 66.854,78.282L66.854,10.677L79.117,22.992C79.693,23.57 80.256,23.853 81.114,23.853C81.971,23.853 82.534,23.57 83.11,22.992C84.25,21.848 84.25,20.125 83.11,18.981L65.997,1.794C65.715,1.511 65.421,1.215 65.139,1.215C64.563,0.932 63.718,0.932 62.861,1.215C62.579,1.498 62.285,1.498 62.003,1.794L44.89,18.981C43.75,20.125 43.75,21.848 44.89,22.992C46.029,24.149 47.744,24.149 48.883,22.992ZM103.936,35.32L81.114,35.32L81.114,41.053L103.936,41.053L103.936,121.27L24.064,121.27L24.064,41.053L46.886,41.053L46.886,35.32L24.064,35.32C20.928,35.32 18.355,37.904 18.355,41.053L18.355,121.27C18.355,124.419 20.928,127.003 24.064,127.003L103.936,127.003C107.072,127.003 109.645,124.419 109.645,121.27L109.645,41.053C109.645,37.891 107.072,35.32 103.936,35.32Z" /></svg> then “Add to Home Screen”</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript">
+            var prompt = new pwaInstallPrompt();
+        </script>
+    </body>
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="map"></div>
     <script>
       
@@ -340,7 +373,7 @@ visibilityHandler();
       // Try HTML5 geolocation.
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-		 
+          enableHighAccuracy: true
           lat = position.coords.latitude;
           lng = position.coords.longitude;
           var pos = { lat: lat, lng: lng, name };
@@ -415,6 +448,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
 
      <center><input type="button" class="myButton" style="float: left;" value="Home" onclick="window.location.href='https://vkprakash.github.io/carryr/reload.html'" /> </center>
 
+
   
 
   <center>  
@@ -425,43 +459,16 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   </div>
 </div>
 <center>
-	
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-	
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-	
-	
-	
 
-   
-<!-- <center><input type="button" class="pay" style="float: center;" value="Pay With Card" onclick="window.location.href='https://pay.google.com/payments/u/0/home#sendRequestMoney'" /> </center> -->
-    
-    <center><a href="https://pay.google.com/payments/u/0/home#sendRequestMoney" class="pay">Pay With Card</a>
+
+<center><a href="https://pay.google.com/payments/u/0/home#sendRequestMoney" class="pay">Pay With Card</a>
 </center>
 
 
 
   <style>
+
         
         .myButton2 {
   -moz-box-shadow: 3px 4px 0px 0px #8a2121;
@@ -502,14 +509,65 @@ window.onclick = function(event) {
   position:relative;
   top:1px;
 }
+
         
             
         
+
                 
         
+
         
+
 </style>
 
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+   
+<!-- <center><input type="button" class="pay" style="float: center;" value="Pay With Card" onclick="window.location.href='https://pay.google.com/payments/u/0/home#sendRequestMoney'" /> </center> -->
+    
+    <script>
+
+      // query current page visibility state: prerender, visible, hidden
+var pageVisibility = document.visibilityState;
+
+// subscribe to visibility change events
+document.addEventListener('visibilitychange', function() {
+  // fires when user switches tabs, apps, goes to homescreen, etc.
+    if (document.visibilityState == 'hidden') { 
+
+     }
+
+    // fires when app transitions from prerender, user returns to the app / tab.
+    if (document.visibilityState == 'visible') { 
+
+    }
+});
+
+</script>
+    
     
       
     <script>
@@ -518,6 +576,8 @@ window.onclick = function(event) {
    $("#map").load(location.href + " #map>*", "");
   }); 
 </script>
+
+
 
 
 
