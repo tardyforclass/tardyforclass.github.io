@@ -5,19 +5,16 @@
       "actions": {
         
         
-        "ahref_handler": [{
-          "{{#if $jason.url.indexOf('sms') !== -1 }}": {
-            "type": "$href",
-            "options": {
-              "view": "app",
-              "url": "{{$jason.url}}"
-            }
-          }
-        }, {
-          "{{#else}}": {
-            "type": "$default"
-          }
-        }],
+        "$load": {
+"type": "$render"
+},
+"visit": [
+{
+"{{#if /\\/('mailto')$/.test($jason.url) }}": {
+"type": "$app"
+}
+},
+,
         
         
         
