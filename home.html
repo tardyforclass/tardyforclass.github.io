@@ -10,18 +10,6 @@
 	 
     <meta charset="utf-8">
     <style>
-	    body {
-   -webkit-user-select: none;
-}
-	    body {
-   -webkit-tap-highlight-color: transparent;
-}
-	    
-	    body {
-   -webkit-touch-callout: none;
-}
-	    
-	    
 	    
 	    body {
         background-color: #EDEBEB
@@ -257,28 +245,12 @@
     </style>
     <!-- Place this inside the H
       TML head; don't use async defer for now -->
-	  
-	  
-	  
-    <script>
-      function visibilityHandler() {
-  var hash = '#bg';
-  if (document.hidden && !window.location.hash) {
-    window.history.replaceState(null, null, window.location + hash);
-  } else if (!document.hidden && window.location.hash == hash) {
-    var l = '' + window.location;
-    window.history.replaceState(null, null, l.substr(0, l.length - hash.length));
-  }
-};
-document.addEventListener('visibilitychange', visibilityHandler, false);
-visibilityHandler();
-	    
-	    
-</script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
- 
+
+
+
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
 
@@ -318,8 +290,30 @@ visibilityHandler();
       </script>
 
 
+
+
   </head>
   <body>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="map"></div>
     <script>
       
@@ -340,7 +334,7 @@ visibilityHandler();
       // Try HTML5 geolocation.
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-		 
+          enableHighAccuracy: true
           lat = position.coords.latitude;
           lng = position.coords.longitude;
           var pos = { lat: lat, lng: lng, name };
@@ -393,7 +387,7 @@ visibilityHandler();
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed. Click the "home" button then click start app' :
+                              'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
@@ -415,6 +409,7 @@ geoFire.set("User", [lat, lng] ).then(()=>{
 
      <center><input type="button" class="myButton" style="float: left;" value="Home" onclick="window.location.href='https://vkprakash.github.io/carryr/reload.html'" /> </center>
 
+
   
 
   <center>  
@@ -425,44 +420,15 @@ geoFire.set("User", [lat, lng] ).then(()=>{
   </div>
 </div>
 <center>
-	
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-	
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-	
-	
-	
 
-   
-<!-- <center><input type="button" class="pay" style="float: center;" value="Pay With Card" onclick="window.location.href='https://pay.google.com/payments/u/0/home#sendRequestMoney'" /> </center> -->
-   
-   <!-- <center><a href="https://pay.google.com/payments/u/0/home#sendRequestMoney" class="pay">Pay With Card</a>
-</center> -->
-	
+
+
 
 
 
   <style>
+
         
         .myButton2 {
   -moz-box-shadow: 3px 4px 0px 0px #8a2121;
@@ -503,14 +469,47 @@ window.onclick = function(event) {
   position:relative;
   top:1px;
 }
+
         
             
         
+
                 
         
+
         
+
 </style>
 
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+   
+<!-- <center><input type="button" class="pay" style="float: center;" value="Pay With Card" onclick="window.location.href='https://pay.google.com/payments/u/0/home#sendRequestMoney'" /> </center> -->
+    
+    
+    
     
       
     <script>
@@ -519,6 +518,8 @@ window.onclick = function(event) {
    $("#map").load(location.href + " #map>*", "");
   }); 
 </script>
+
+
 
 
 
