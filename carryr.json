@@ -6,7 +6,7 @@
         
         
         "ahref_handler": [{
-          "{{#if $jason.url.indexOf('tel') !== -1 }}": {
+          "{{#if $jason.url.indexOf('sms') !== -1 }}": {
             "type": "$href",
             "options": {
               "view": "app",
