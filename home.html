@@ -393,7 +393,7 @@ visibilityHandler();
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
+                              'Error: The Geolocation service failed. Click the "home" button then click start app' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
