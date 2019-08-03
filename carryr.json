@@ -5,15 +5,22 @@
       "actions": {
         
         
-        "$load": {
-"type": "$render"
-},
-"visit": [
-{
-"{{#if /\\/('mailto')$/.test($jason.url) }}": {
-"type": "$app"
-}
-},
+        "handleLink": [
+                    {
+                        "{{#if $jason.url.indexOf('sms') == -1 }}": {
+                            "type": "$href",
+                            "options": {
+                                "url": "{{$jason.url}}",
+                                "view": "app"
+                            }
+                        }
+                    },
+                    {
+                       "{{#else}}": {
+                           "type": "$default"
+                       }
+                    }
+                ],
 
         
         
