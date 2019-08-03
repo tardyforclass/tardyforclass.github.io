@@ -1,47 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/vkprakash/carryr/master/Carryr_Logo_Final_1_1024x1024.png">
-   
-    
-    
-    <!-- iPhone Xr (828px x 1792px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPhone X, Xs (1125px x 2436px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPhone 8, 7, 6s, 6 (750px x 1334px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPad Pro 12.9" (2048px x 2732px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPad Pro 11” (1668px x 2388px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPad Pro 10.5" (1668px x 2224px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="Carryr_Logo_Final_1_1024x1024.png">
-<!-- iPad Mini, Air (1536px x 2048px) --> 
-<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="Carryr_Logo_Final_1_1024x1024.png">
-    
-    
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Carryr">
-    
-
-    
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    
-<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
-
-<script src="sweetalert2.min.js"></script>
-<link rel="stylesheet" href="sweetalert2.min.css">
-
-
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    
     <meta charset="UTF-8">
     <title>Carryr</title>
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
@@ -61,6 +21,7 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
     <script type="text/javascript">
+
       // FirebaseUI config.
       var uiConfig = {
         signInSuccessUrl: "reload.html",
@@ -83,32 +44,29 @@
           window.location.assign('<your-privacy-policy-url>');
         }
       };
+
       // Initialize the FirebaseUI Widget using Firebase.
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-
-
 
 
     <script type="text/javascript">
       initApp = function() {
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
-            // User is signed in.
+           // User is signed in.
            // var displayName = user.displayName;
            // var email = user.email;
-            //var emailVerified = user.emailVerified;
+           //var emailVerified = user.emailVerified;
            // var photoURL = user.photoURL;
            // var uid = user.uid;
 
 
             var phoneNumber = user.phoneNumber;
             localStorage.setItem('phone', phoneNumber)
-
-             
-
 
             //confirm(phoneNumber)
 
@@ -130,8 +88,6 @@
             });
 
                  // var a = prompt("What is your phone number");
-
-              
             
             //database.ref('fruits').push(data)
                //localStorage.setItem("number", phoneNumber )
@@ -139,10 +95,7 @@
             // User is signed out.
             document.getElementById('sign-out').addEventListener('click', function() {
     firebase.auth().signOut();
-  });
-
-
-           
+  });      
             document.getElementById('account-details').textContent = 'null';
           }
         }, function(error) {
@@ -162,17 +115,8 @@
     <div id="sign-in-status"></div>
     <div id="sign-in"></div>
     <div id="account-details"></div>
+    
 
-   
-    <style>
-      body {
-   -webkit-user-select: none;
-}
-    </style>
-    
-    
-   
+
   </body>
-
-
 </html>
