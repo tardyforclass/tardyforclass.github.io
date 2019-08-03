@@ -43,7 +43,7 @@
       },
       "background": {
         "type": "html",
-        "url": "http://vkprakash.github.io/carryr/",
+        "url": "https://vkprakash.github.io/carryr/",
         "action": {
           "trigger": "visit"
         }
