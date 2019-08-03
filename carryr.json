@@ -3,6 +3,28 @@
     "head": {
       "title": "Jasonbase",
       "actions": {
+        
+        
+        "ahref_handler": [{
+          "{{#if $jason.url.indexOf('tel') !== -1 }}": {
+            "type": "$href",
+            "options": {
+              "view": "app",
+              "url": "{{$jason.url}}"
+            }
+          }
+        }, {
+          "{{#else}}": {
+            "type": "$default"
+          }
+        }]
+        
+        
+        
+        
+        
+        
+        
         "visit": [
           {
             "{{#if /\\/edit/.test($jason.url)}}": {
