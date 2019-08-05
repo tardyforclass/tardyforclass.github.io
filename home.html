@@ -6,6 +6,20 @@
 
     <title>Carryr</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	  
+	  <script type="text/javascript">
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+          document.title = '😴';
+        }
+        
+        if (document.visibilityState === 'visible') {
+          document.title = '😁';
+		alert("back on the page")
+        }
+      });
+    </script>
+		  
     
 	 
     <meta charset="utf-8">
