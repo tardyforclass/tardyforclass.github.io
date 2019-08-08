@@ -7,15 +7,19 @@
     <title>Carryr</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 	  
-	  <script type="text/javascript">
-      document.addEventListener('visibilitychange', () => {
+	<script>
+		document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'hidden') {
           history.pushState(null, null, '#');
         }
         
-       
+        if (document.visibilityState === 'visible') {
+          history.replaceState(null, null, ' ');
+        }
       });
-    </script>
+	  </script>
+	  
+	
 		  
     
 	 
